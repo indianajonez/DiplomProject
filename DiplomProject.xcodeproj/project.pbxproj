@@ -9,24 +9,44 @@
 /* Begin PBXBuildFile section */
 		F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C52AE008080055BD2D /* AppDelegate.swift */; };
 		F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */; };
-		F3A1A8CA2AE008080055BD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C92AE008080055BD2D /* ViewController.swift */; };
+		F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C92AE008080055BD2D /* LoginViewController.swift */; };
 		F3A1A8CF2AE008090055BD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A1A8CE2AE008090055BD2D /* Assets.xcassets */; };
 		F3A1A8D22AE008090055BD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A1A8D02AE008090055BD2D /* LaunchScreen.storyboard */; };
 		F3A1A8DA2AE00E8F0055BD2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3A1A8D92AE00E8F0055BD2D /* GoogleService-Info.plist */; };
 		F3A1A8DD2AE0107C0055BD2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F3A1A8DC2AE0107C0055BD2D /* FirebaseAuth */; };
 		F3A1A8DF2AE0107C0055BD2D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F3A1A8DE2AE0107C0055BD2D /* FirebaseFirestore */; };
 		F3A1A8E12AE0107C0055BD2D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3A1A8E02AE0107C0055BD2D /* FirebaseFirestoreSwift */; };
+		F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8E82AE013890055BD2D /* CheckerService.swift */; };
+		F3A1A8ED2AE0144D0055BD2D /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */; };
+		F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8EE2AE0146C0055BD2D /* User.swift */; };
+		F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F02AE0149A0055BD2D /* CurrentUserService.swift */; };
+		F3A1A8F32AE015240055BD2D /* RegistrationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */; };
+		F3A1A8F72AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F62AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift */; };
+		F3A1A8F92AE015B60055BD2D /* LoginViewControllerDelegateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F82AE015B60055BD2D /* LoginViewControllerDelegateError.swift */; };
+		F3A1A8FF2AE0166C0055BD2D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8FE2AE0166C0055BD2D /* ProfileViewController.swift */; };
+		F3A1A9022AE016DD0055BD2D /* ExtentionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A9012AE016DD0055BD2D /* ExtentionUIColor.swift */; };
+		F3A1A9042AE025900055BD2D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A9032AE025900055BD2D /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3A1A8C22AE008080055BD2D /* DiplomProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiplomProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A1A8C52AE008080055BD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3A1A8C92AE008080055BD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3A1A8C92AE008080055BD2D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3A1A8CE2AE008090055BD2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3A1A8D12AE008090055BD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3A1A8D32AE008090055BD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3A1A8D92AE00E8F0055BD2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F3A1A8D92AE00E8F0055BD2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "DiplomProject/LoginModule/Model/FirebaseAuth/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F3A1A8E82AE013890055BD2D /* CheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerService.swift; sourceTree = "<group>"; };
+		F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		F3A1A8EE2AE0146C0055BD2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F3A1A8F02AE0149A0055BD2D /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
+		F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAlert.swift; sourceTree = "<group>"; };
+		F3A1A8F62AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegateProtocol.swift; sourceTree = "<group>"; };
+		F3A1A8F82AE015B60055BD2D /* LoginViewControllerDelegateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegateError.swift; sourceTree = "<group>"; };
+		F3A1A8FE2AE0166C0055BD2D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F3A1A9012AE016DD0055BD2D /* ExtentionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionUIColor.swift; sourceTree = "<group>"; };
+		F3A1A9032AE025900055BD2D /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				F3A1A8C42AE008080055BD2D /* DiplomProject */,
+				F3A1A9002AE016A20055BD2D /* Extention */,
 				F3A1A8C32AE008080055BD2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,15 +83,112 @@
 		F3A1A8C42AE008080055BD2D /* DiplomProject */ = {
 			isa = PBXGroup;
 			children = (
-				F3A1A8D92AE00E8F0055BD2D /* GoogleService-Info.plist */,
-				F3A1A8C52AE008080055BD2D /* AppDelegate.swift */,
-				F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */,
-				F3A1A8C92AE008080055BD2D /* ViewController.swift */,
-				F3A1A8CE2AE008090055BD2D /* Assets.xcassets */,
-				F3A1A8D02AE008090055BD2D /* LaunchScreen.storyboard */,
 				F3A1A8D32AE008090055BD2D /* Info.plist */,
+				F3A1A8E32AE012D10055BD2D /* LoginModule */,
+				F3A1A8FA2AE015EB0055BD2D /* ProfileModule */,
+				F3A1A8E22AE0129E0055BD2D /* AppSettings */,
 			);
 			path = DiplomProject;
+			sourceTree = "<group>";
+		};
+		F3A1A8E22AE0129E0055BD2D /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8D02AE008090055BD2D /* LaunchScreen.storyboard */,
+				F3A1A8CE2AE008090055BD2D /* Assets.xcassets */,
+				F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */,
+				F3A1A8C52AE008080055BD2D /* AppDelegate.swift */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		F3A1A8E32AE012D10055BD2D /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8E62AE013020055BD2D /* Model */,
+				F3A1A8E52AE012FC0055BD2D /* View */,
+				F3A1A8E42AE012FA0055BD2D /* ViewModel */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		F3A1A8E42AE012FA0055BD2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */,
+				F3A1A8F62AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift */,
+				F3A1A8F82AE015B60055BD2D /* LoginViewControllerDelegateError.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3A1A8E52AE012FC0055BD2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8C92AE008080055BD2D /* LoginViewController.swift */,
+				F3A1A9032AE025900055BD2D /* RegistrationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3A1A8E62AE013020055BD2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8E72AE0133F0055BD2D /* FirebaseAuth */,
+				F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */,
+				F3A1A8EE2AE0146C0055BD2D /* User.swift */,
+				F3A1A8F02AE0149A0055BD2D /* CurrentUserService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3A1A8E72AE0133F0055BD2D /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8D92AE00E8F0055BD2D /* GoogleService-Info.plist */,
+				F3A1A8E82AE013890055BD2D /* CheckerService.swift */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		F3A1A8FA2AE015EB0055BD2D /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8FD2AE016180055BD2D /* Model */,
+				F3A1A8FC2AE016150055BD2D /* View */,
+				F3A1A8FB2AE016110055BD2D /* ViewModel */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		F3A1A8FB2AE016110055BD2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3A1A8FC2AE016150055BD2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A8FE2AE0166C0055BD2D /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3A1A8FD2AE016180055BD2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3A1A9002AE016A20055BD2D /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1A9012AE016DD0055BD2D /* ExtentionUIColor.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +270,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A1A8CA2AE008080055BD2D /* ViewController.swift in Sources */,
+				F3A1A8ED2AE0144D0055BD2D /* UserServiceProtocol.swift in Sources */,
+				F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */,
+				F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */,
+				F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */,
+				F3A1A9042AE025900055BD2D /* RegistrationViewController.swift in Sources */,
+				F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */,
+				F3A1A8F32AE015240055BD2D /* RegistrationAlert.swift in Sources */,
+				F3A1A8FF2AE0166C0055BD2D /* ProfileViewController.swift in Sources */,
 				F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */,
+				F3A1A9022AE016DD0055BD2D /* ExtentionUIColor.swift in Sources */,
+				F3A1A8F72AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift in Sources */,
 				F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */,
+				F3A1A8F92AE015B60055BD2D /* LoginViewControllerDelegateError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
