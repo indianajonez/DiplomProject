@@ -23,10 +23,66 @@ class ProfileHeaderView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Kate"
-        label.textColor = UIColor.createColor(lightMode: .black, darkMode: .white)
+        label.textColor = .gray
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 17)
         return label
+    }()
+    
+    private lazy var labelUserName: UILabel = {
+        let label = UILabel()
+        label.text = "Имя заданное в настройках"
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 17)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var labelAboutUser: UILabel = {
+        let label = UILabel()
+        label.text = "текст из настроек"
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 17)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var iconAge: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "1cake.png")
+        view.tintColor = .white
+        view.contentMode = .scaleAspectFit
+        
+        return view
+    }()
+    
+    private lazy var labelAge: UILabel = {
+        let label = UILabel()
+        label.text = "возраст из настроек"
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 17)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var iconAboutUser: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "card.png")
+        view.tintColor = .white
+        view.contentMode = .scaleAspectFit
+        
+        return view
+    }()
+    
+    private lazy var iconEmail: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "email.png")
+        view.tintColor = .white
+        view.contentMode = .scaleAspectFit
+        return view
     }()
     
     
@@ -34,7 +90,7 @@ class ProfileHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        [avatarImage, fullNameLabel].forEach{addSubview($0)}
+        [avatarImage, fullNameLabel, labelUserName, labelAboutUser, iconAge, iconAboutUser, labelAge, iconEmail].forEach{addSubview($0)}
         setupConstraints()
     }
     
@@ -58,15 +114,31 @@ class ProfileHeaderView: UIView {
         NSLayoutConstraint.activate([
         
             avatarImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            avatarImage.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-
+            avatarImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
             avatarImage.widthAnchor.constraint(equalToConstant: 100),
             avatarImage.heightAnchor.constraint(equalToConstant: 100),
             
-            fullNameLabel.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 16),
-            fullNameLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            labelUserName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            labelUserName.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 10),
+            
+            iconAboutUser.topAnchor.constraint(equalTo: labelUserName.bottomAnchor, constant: 15),
+            iconAboutUser.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 10),
+            
+            labelAboutUser.topAnchor.constraint(equalTo: labelUserName.bottomAnchor, constant: 15),
+            labelAboutUser.leadingAnchor.constraint(equalTo: iconAboutUser.trailingAnchor, constant: 4),
+            
+            iconAge.topAnchor.constraint(equalTo: labelAboutUser.bottomAnchor, constant: 15),
+            iconAge.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 10),
+            
+            labelAge.topAnchor.constraint(equalTo: labelAboutUser.bottomAnchor, constant: 15),
+            labelAge.leadingAnchor.constraint(equalTo: iconAge.trailingAnchor, constant: 4),
+            
+            iconEmail.topAnchor.constraint(equalTo: labelAge.bottomAnchor, constant: 15),
+            iconEmail.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 12),
+            
+            fullNameLabel.topAnchor.constraint(equalTo: labelAge.bottomAnchor, constant: 15),
+            fullNameLabel.leadingAnchor.constraint(equalTo: iconEmail.trailingAnchor, constant: 8),
 
-        
         ])
         
     }

@@ -23,7 +23,7 @@ class PostTableViewCell: UITableViewCell {
     private lazy var postImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .black
+        image.backgroundColor = .white
         image.contentMode = .scaleAspectFit
         return image
     }()

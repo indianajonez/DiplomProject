@@ -29,7 +29,7 @@ class PhotosTableViewCell: UITableViewCell {
         let name = UILabel()
         name.textColor = UIColor.createColor(lightMode: .black, darkMode: .white)
         name.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        name.text = "Photos"
+        name.text = "Фото"
         name.translatesAutoresizingMaskIntoConstraints = false
         return name
     }()
@@ -37,7 +37,8 @@ class PhotosTableViewCell: UITableViewCell {
     private lazy var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "Кнопка"), for: .normal)
+        button.setImage(UIImage(systemName: "arrow.right.circle"), for: .normal)      //(UIImage(named: "Кнопка"), for: .normal)
+        button.tintColor = .black
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         return button
     }()
@@ -49,7 +50,7 @@ class PhotosTableViewCell: UITableViewCell {
         imageCollection.translatesAutoresizingMaskIntoConstraints = false
         imageCollection.delegate = self // кто будет реагировать на делегиварование
         imageCollection.dataSource = self // хранилище дванных
-        imageCollection.backgroundColor = UIColor.createColor(lightMode: .lightGray, darkMode: .black)
+        imageCollection.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
         imageCollection.register(PhotosCollectionViewCell.self, forCellWithReuseIdentifier: PhotosCollectionViewCell.identifier)
         return imageCollection
     }()

@@ -110,6 +110,7 @@ class LoginViewController: UIViewController {
         setupConstraints()
         setupgestureRecognizer()
         view.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
+        self.navigationItem.setHidesBackButton(true, animated:true)
         
         Auth.auth().addStateDidChangeListener{ auth, user in // заходим в профайл если данные получены корректно
             //

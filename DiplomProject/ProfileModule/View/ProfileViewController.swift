@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.delegate = self
         table.dataSource = self
-        table.backgroundColor = UIColor.createColor(lightMode: .lightGray, darkMode: .black)
+        table.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
         table.register(PhotosTableViewCell.self, forCellReuseIdentifier: PhotosTableViewCell.identifier)
         table.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
         return table
@@ -37,11 +37,12 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-//        navigationItem.title = "ProfileView comming soon:)"
+//        navigationItem.title = "ProfileView"
         navigationItem.hidesBackButton = true
         print(user?.fullName ?? "Not full name")
         setupView()
         setupConstraints()
+        makeBarButtonItems()
     }
     
     
@@ -70,7 +71,35 @@ class ProfileViewController: UIViewController {
             table.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    
+    @objc private func makeBarButtonItems() {
+        let edit = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(editTapped))
+        let logout = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .plain, target: self, action: #selector(logoutTapped))
+
+        navigationItem.rightBarButtonItems = [logout, edit]
+        edit.tintColor = .black
+        logout.tintColor = .black
+    }
+    
+    @objc
+    func editTapped() {
+        let settingsProfileVC = SettingsProfileViewController()
+        navigationController?.pushViewController(settingsProfileVC, animated: true)
+    }
+    
+    @objc
+    func logoutTapped() {
+        let loginVC = LoginViewController(checkerService: CheckerService())
+        navigationController?.pushViewController(loginVC, animated: true)
+        
+        
+    }
+    
+    
+    
 }
+
+
 
 
 // MARK: - UITableViewDelegate
@@ -83,7 +112,7 @@ extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ProfileHeaderView()
         header.setupView(user: user) //как здесь правильно прописать?
-        header.backgroundColor = UIColor.createColor(lightMode: .lightGray, darkMode: .black)
+        header.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
         return section == 0 ? header : nil
     }
     
@@ -105,12 +134,12 @@ extension ProfileViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.identifier) as? PhotosTableViewCell else { return UITableViewCell()}
             cell.delegate = self
-            cell.backgroundColor = UIColor.createColor(lightMode: .lightGray, darkMode: .black)
+            cell.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier) as? PostTableViewCell else { return UITableViewCell()}
             cell.setupCell(listPost[indexPath.row])
-            cell.backgroundColor = UIColor.createColor(lightMode: .lightGray, darkMode: .black)
+            cell.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
             return cell
         }
     }
@@ -129,4 +158,5 @@ extension ProfileViewController: PhotosGalleryDelegateProtocol {
         let galleryVC = PhotosViewController()
         navigationController?.pushViewController(galleryVC, animated: true)
     }
+    
 }
