@@ -7,6 +7,8 @@
 
 import UIKit
 
+//MARK: - настроить отображение коллекции с первой фотографии, починить отображение галереи
+
 class ProfileViewController: UIViewController {
     
     
@@ -39,6 +41,8 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .white
 //        navigationItem.title = "ProfileView"
         navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Мой профайл"
         print(user?.fullName ?? "Not full name")
         setupView()
         setupConstraints()
@@ -91,12 +95,7 @@ class ProfileViewController: UIViewController {
     func logoutTapped() {
         let loginVC = LoginViewController(checkerService: CheckerService())
         navigationController?.pushViewController(loginVC, animated: true)
-        
-        
     }
-    
-    
-    
 }
 
 
@@ -112,7 +111,8 @@ extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ProfileHeaderView()
         header.setupView(user: user) //как здесь правильно прописать?
-        header.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
+        header.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
+        header.layer.cornerRadius = 30
         return section == 0 ? header : nil
     }
     
@@ -134,12 +134,14 @@ extension ProfileViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.identifier) as? PhotosTableViewCell else { return UITableViewCell()}
             cell.delegate = self
-            cell.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
+            cell.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
+            cell.layer.cornerRadius = 30
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier) as? PostTableViewCell else { return UITableViewCell()}
             cell.setupCell(listPost[indexPath.row])
-            cell.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
+            cell.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
+            cell.layer.cornerRadius = 30
             return cell
         }
     }

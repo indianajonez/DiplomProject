@@ -18,10 +18,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow (windowScene: scene)
-        window.makeKeyAndVisible()
-        let navigation = UINavigationController(rootViewController: LoginViewController(checkerService: CheckerService()))
-        window.rootViewController = navigation
         self.window = window
+        window.makeKeyAndVisible()
+        let tabBarController = UITabBarController()
+        let loginViewController = LoginViewController(checkerService: CheckerService())
+        let profileVC = ProfileViewController(user: User(login: "", fullName: ""))
+        let settingsVC = SettingsProfileViewController()
+        let mediaVC = MediaPlayerViewController()
+        let favorietsVC = FavorietsViewController()
+        
+        let viewControllers = [loginViewController, profileVC, settingsVC, mediaVC, favorietsVC]
+        
+        tabBarController.viewControllers = viewControllers
+        window.rootViewController = tabBarController
+        
+        let navigation = UINavigationController(rootViewController: LoginViewController(checkerService: CheckerService()))
+//        window.rootViewController = TabBarController()
+        window.rootViewController = navigation
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

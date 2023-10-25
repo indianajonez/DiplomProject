@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F34B27192AE83CCD0088F5C8 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27182AE83CCD0088F5C8 /* UserSettings.swift */; };
+		F34B271B2AE8704E0088F5C8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271A2AE8704E0088F5C8 /* TabBarController.swift */; };
+		F34B271D2AE879AB0088F5C8 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */; };
+		F34B27202AE946670088F5C8 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */; };
+		F34B27232AE948810088F5C8 /* FavorietsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27222AE948810088F5C8 /* FavorietsViewController.swift */; };
 		F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C52AE008080055BD2D /* AppDelegate.swift */; };
 		F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */; };
 		F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C92AE008080055BD2D /* LoginViewController.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F34B27182AE83CCD0088F5C8 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		F34B271A2AE8704E0088F5C8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
+		F34B27222AE948810088F5C8 /* FavorietsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorietsViewController.swift; sourceTree = "<group>"; };
 		F3A1A8C22AE008080055BD2D /* DiplomProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiplomProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A1A8C52AE008080055BD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F34B271E2AE946230088F5C8 /* MediaPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */,
+			);
+			path = MediaPlayerModule;
+			sourceTree = "<group>";
+		};
+		F34B27212AE9485C0088F5C8 /* FavorietsModule */ = {
+			isa = PBXGroup;
+			children = (
+				F34B27222AE948810088F5C8 /* FavorietsViewController.swift */,
+			);
+			path = FavorietsModule;
+			sourceTree = "<group>";
+		};
 		F3A1A8B92AE008080055BD2D = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +129,14 @@
 		F3A1A8C42AE008080055BD2D /* DiplomProject */ = {
 			isa = PBXGroup;
 			children = (
+				F34B27212AE9485C0088F5C8 /* FavorietsModule */,
+				F34B271E2AE946230088F5C8 /* MediaPlayerModule */,
 				F3A1A8D32AE008090055BD2D /* Info.plist */,
 				F3A1A8E32AE012D10055BD2D /* LoginModule */,
 				F3A1A8FA2AE015EB0055BD2D /* ProfileModule */,
 				F3E9B7A02AE6B4D100FAA97A /* SettingsProfileModule */,
 				F3A1A8E22AE0129E0055BD2D /* AppSettings */,
+				F34B271A2AE8704E0088F5C8 /* TabBarController.swift */,
 			);
 			path = DiplomProject;
 			sourceTree = "<group>";
@@ -225,6 +254,7 @@
 				F3E9B7942AE26FAE00FAA97A /* PostTableViewCell.swift */,
 				F3E9B79A2AE2847F00FAA97A /* PhotosCollectionViewCell.swift */,
 				F3E9B79E2AE288C800FAA97A /* PhotosViewController.swift */,
+				F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */,
 			);
 			path = TableViewStyle;
 			sourceTree = "<group>";
@@ -233,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E9B7A12AE6B50600FAA97A /* SettingsProfileViewController.swift */,
+				F34B27182AE83CCD0088F5C8 /* UserSettings.swift */,
 			);
 			path = SettingsProfileModule;
 			sourceTree = "<group>";
@@ -325,12 +356,16 @@
 				F3E9B7952AE26FAE00FAA97A /* PostTableViewCell.swift in Sources */,
 				F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */,
 				F3E9B7992AE27D6000FAA97A /* Photos.swift in Sources */,
+				F34B271B2AE8704E0088F5C8 /* TabBarController.swift in Sources */,
+				F34B27202AE946670088F5C8 /* MediaPlayerViewController.swift in Sources */,
 				F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */,
 				F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */,
 				F3A1A9042AE025900055BD2D /* RegistrationViewController.swift in Sources */,
 				F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */,
+				F34B27192AE83CCD0088F5C8 /* UserSettings.swift in Sources */,
 				F3A1A8F32AE015240055BD2D /* RegistrationAlert.swift in Sources */,
 				F3E9B7932AE26F4400FAA97A /* PhotosGalleryDelegateProtocol.swift in Sources */,
+				F34B271D2AE879AB0088F5C8 /* FriendsTableViewCell.swift in Sources */,
 				F3E9B7A22AE6B50600FAA97A /* SettingsProfileViewController.swift in Sources */,
 				F3A1A8FF2AE0166C0055BD2D /* ProfileViewController.swift in Sources */,
 				F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */,
@@ -338,6 +373,7 @@
 				F3A1A8F72AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift in Sources */,
 				F3E9B78E2AE1971D00FAA97A /* ProfileHeaderView.swift in Sources */,
 				F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */,
+				F34B27232AE948810088F5C8 /* FavorietsViewController.swift in Sources */,
 				F3A1A8F92AE015B60055BD2D /* LoginViewControllerDelegateError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

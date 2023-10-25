@@ -10,6 +10,7 @@ import UIKit
 import UIKit
 
 //MARK: - надо прописать навигейшн контроллер и понять почему кнопка не появлятеся на скролл вью
+//MARK: - настроить метод сохраниения новых параметров func setUserInformation(user: UserSettings) для ПрофайлВью
 
 class SettingsProfileViewController: UIViewController {
     
@@ -152,7 +153,7 @@ class SettingsProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Настройки пользователя"
+        self.title = "Настройки"
         self.view.backgroundColor = UIColor.white
         setupView()
         setupConstraints()
@@ -163,12 +164,24 @@ class SettingsProfileViewController: UIViewController {
         setupGradient()
     }
     
+    
+    //MARK: - Public methods
+    
+    func setUserInformation(user: UserSettings) {
+        self.textFieldName.text = user.name
+//        self.addPhotoImageView.image = UIImageView(image: user.photo)
+        self.textFieldAboutUser.text = user.aboutUser
+        self.textFieldAge.text = user.age
+    }
+    
+    
     //MARK: - Private methods
     
     @objc
     private func didTapSavedButton() {
         
     }
+    
     
     func setupGradient() {
         let gradient = CAGradientLayer()
