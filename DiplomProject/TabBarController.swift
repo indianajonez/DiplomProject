@@ -35,7 +35,7 @@ class TabBarController: UITabBarController {
         let mediaVC = UINavigationController(rootViewController: mediaVC)
         let favoritesVC = UINavigationController(rootViewController: favorietsVC)
         
-        profileVC.navigationController?.navigationBar.isHidden = true
+//        profileVC.navigationController?.navigationBar.isHidden = true
         
         viewControllers = [profileVC, settingsVC, mediaVC, favoritesVC]
     }

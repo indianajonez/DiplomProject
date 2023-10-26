@@ -26,16 +26,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let settingsVC = SettingsProfileViewController()
         let mediaVC = MediaPlayerViewController()
         let favorietsVC = FavorietsViewController()
-        
-        let viewControllers = [loginViewController, profileVC, settingsVC, mediaVC, favorietsVC]
-        
+
+        let viewControllers = [ profileVC, settingsVC, mediaVC, favorietsVC] //loginViewController,
+
         tabBarController.viewControllers = viewControllers
         window.rootViewController = tabBarController
         
-        let navigation = UINavigationController(rootViewController: LoginViewController(checkerService: CheckerService()))
-//        window.rootViewController = TabBarController()
-        window.rootViewController = navigation
+//        let navigation = UINavigationController(rootViewController: LoginViewController(checkerService: CheckerService()))
+//        window.rootViewController = navigation
         
+        //        window.rootViewController = TabBarController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
