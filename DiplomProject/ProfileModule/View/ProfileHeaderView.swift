@@ -113,7 +113,7 @@ class ProfileHeaderView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
         
-            avatarImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+            avatarImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             avatarImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
             avatarImage.widthAnchor.constraint(equalToConstant: 100),
             avatarImage.heightAnchor.constraint(equalToConstant: 100),

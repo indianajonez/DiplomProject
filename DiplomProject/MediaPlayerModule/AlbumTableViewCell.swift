@@ -74,8 +74,6 @@ final class AlbumTableViewCell: UITableViewCell {
             albumCover.widthAnchor.constraint(equalToConstant: 100),
             albumCover.heightAnchor.constraint(equalToConstant: 100),
             albumCover.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -16)
-        
-        
         ])
         
         NSLayoutConstraint.activate([
