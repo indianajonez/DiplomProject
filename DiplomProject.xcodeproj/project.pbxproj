@@ -28,15 +28,19 @@
 		F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96842AEE7B73000F5F40 /* Friends.swift */; };
 		F39A96872AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */; };
 		F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */; };
+		F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */; };
+		F39A968D2AEECB12000F5F40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */; };
+		F39A96902AEECC29000F5F40 /* PostStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F39A968E2AEECC29000F5F40 /* PostStorage.xcdatamodeld */; };
+		F39A96922AEED612000F5F40 /* FavorietsPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96912AEED612000F5F40 /* FavorietsPostTableViewCell.swift */; };
+		F39A969A2AEED9BF000F5F40 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F39A96992AEED9BF000F5F40 /* FirebaseAuth */; };
+		F39A969C2AEED9BF000F5F40 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F39A969B2AEED9BF000F5F40 /* FirebaseFirestore */; };
+		F39A969E2AEED9BF000F5F40 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F39A969D2AEED9BF000F5F40 /* FirebaseFirestoreSwift */; };
 		F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C52AE008080055BD2D /* AppDelegate.swift */; };
 		F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */; };
 		F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C92AE008080055BD2D /* LoginViewController.swift */; };
 		F3A1A8CF2AE008090055BD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A1A8CE2AE008090055BD2D /* Assets.xcassets */; };
 		F3A1A8D22AE008090055BD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A1A8D02AE008090055BD2D /* LaunchScreen.storyboard */; };
 		F3A1A8DA2AE00E8F0055BD2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3A1A8D92AE00E8F0055BD2D /* GoogleService-Info.plist */; };
-		F3A1A8DD2AE0107C0055BD2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F3A1A8DC2AE0107C0055BD2D /* FirebaseAuth */; };
-		F3A1A8DF2AE0107C0055BD2D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F3A1A8DE2AE0107C0055BD2D /* FirebaseFirestore */; };
-		F3A1A8E12AE0107C0055BD2D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3A1A8E02AE0107C0055BD2D /* FirebaseFirestoreSwift */; };
 		F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8E82AE013890055BD2D /* CheckerService.swift */; };
 		F3A1A8ED2AE0144D0055BD2D /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */; };
 		F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8EE2AE0146C0055BD2D /* User.swift */; };
@@ -81,6 +85,10 @@
 		F39A96842AEE7B73000F5F40 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsgalleryDelegateProtocol.swift; sourceTree = "<group>"; };
 		F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavorietsPostTableViewCell.swift; path = ../../../../../../Desktop/FavorietsModule/FavorietsPostTableViewCell.swift; sourceTree = "<group>"; };
+		F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = ../../../../../../Desktop/FavorietsModule/CoreDataManager.swift; sourceTree = "<group>"; };
+		F39A968F2AEECC29000F5F40 /* PostStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostStorage.xcdatamodel; sourceTree = "<group>"; };
+		F39A96912AEED612000F5F40 /* FavorietsPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorietsPostTableViewCell.swift; sourceTree = "<group>"; };
 		F3A1A8C22AE008080055BD2D /* DiplomProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiplomProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A1A8C52AE008080055BD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,9 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A1A8DD2AE0107C0055BD2D /* FirebaseAuth in Frameworks */,
-				F3A1A8DF2AE0107C0055BD2D /* FirebaseFirestore in Frameworks */,
-				F3A1A8E12AE0107C0055BD2D /* FirebaseFirestoreSwift in Frameworks */,
+				F39A969A2AEED9BF000F5F40 /* FirebaseAuth in Frameworks */,
+				F39A969C2AEED9BF000F5F40 /* FirebaseFirestore in Frameworks */,
+				F39A969E2AEED9BF000F5F40 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +149,9 @@
 		F34B27212AE9485C0088F5C8 /* FavorietsModule */ = {
 			isa = PBXGroup;
 			children = (
+				F39A968E2AEECC29000F5F40 /* PostStorage.xcdatamodeld */,
+				F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */,
+				F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */,
 				F34B27222AE948810088F5C8 /* FavorietsViewController.swift */,
 			);
 			path = FavorietsModule;
@@ -326,6 +337,7 @@
 				F39A96822AEE793F000F5F40 /* FriendsViewController.swift */,
 				F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */,
 				F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */,
+				F39A96912AEED612000F5F40 /* FavorietsPostTableViewCell.swift */,
 				F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */,
 			);
 			path = TableViewStyle;
@@ -357,9 +369,9 @@
 			);
 			name = DiplomProject;
 			packageProductDependencies = (
-				F3A1A8DC2AE0107C0055BD2D /* FirebaseAuth */,
-				F3A1A8DE2AE0107C0055BD2D /* FirebaseFirestore */,
-				F3A1A8E02AE0107C0055BD2D /* FirebaseFirestoreSwift */,
+				F39A96992AEED9BF000F5F40 /* FirebaseAuth */,
+				F39A969B2AEED9BF000F5F40 /* FirebaseFirestore */,
+				F39A969D2AEED9BF000F5F40 /* FirebaseFirestoreSwift */,
 			);
 			productName = DiplomProject;
 			productReference = F3A1A8C22AE008080055BD2D /* DiplomProject.app */;
@@ -390,7 +402,7 @@
 			);
 			mainGroup = F3A1A8B92AE008080055BD2D;
 			packageReferences = (
-				F3A1A8DB2AE0107C0055BD2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F39A96982AEED9BF000F5F40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = F3A1A8C32AE008080055BD2D /* Products */;
 			projectDirPath = "";
@@ -438,12 +450,14 @@
 				F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */,
 				F34B27382AE9580D0088F5C8 /* Song.swift in Sources */,
 				F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */,
+				F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift in Sources */,
 				F3E9B7992AE27D6000FAA97A /* Photos.swift in Sources */,
 				F34B271B2AE8704E0088F5C8 /* TabBarController.swift in Sources */,
 				F34B27202AE946670088F5C8 /* MediaPlayerViewController.swift in Sources */,
 				F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */,
 				F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */,
 				F3A1A9042AE025900055BD2D /* RegistrationViewController.swift in Sources */,
+				F39A96902AEECC29000F5F40 /* PostStorage.xcdatamodeld in Sources */,
 				F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */,
 				F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */,
 				F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */,
@@ -458,7 +472,9 @@
 				F34B273E2AE987E30088F5C8 /* MediaPlayer.swift in Sources */,
 				F3A1A8F72AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift in Sources */,
 				F3E9B78E2AE1971D00FAA97A /* ProfileHeaderView.swift in Sources */,
+				F39A968D2AEECB12000F5F40 /* CoreDataManager.swift in Sources */,
 				F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */,
+				F39A96922AEED612000F5F40 /* FavorietsPostTableViewCell.swift in Sources */,
 				F34B27232AE948810088F5C8 /* FavorietsViewController.swift in Sources */,
 				F3A1A8F92AE015B60055BD2D /* LoginViewControllerDelegateError.swift in Sources */,
 				F34B27402AEA6FC50088F5C8 /* MusicPlayerViewController.swift in Sources */,
@@ -672,7 +688,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F3A1A8DB2AE0107C0055BD2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		F39A96982AEED9BF000F5F40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -683,22 +699,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F3A1A8DC2AE0107C0055BD2D /* FirebaseAuth */ = {
+		F39A96992AEED9BF000F5F40 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F3A1A8DB2AE0107C0055BD2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F39A96982AEED9BF000F5F40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		F3A1A8DE2AE0107C0055BD2D /* FirebaseFirestore */ = {
+		F39A969B2AEED9BF000F5F40 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F3A1A8DB2AE0107C0055BD2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F39A96982AEED9BF000F5F40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		F3A1A8E02AE0107C0055BD2D /* FirebaseFirestoreSwift */ = {
+		F39A969D2AEED9BF000F5F40 /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F3A1A8DB2AE0107C0055BD2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F39A96982AEED9BF000F5F40 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		F39A968E2AEECC29000F5F40 /* PostStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F39A968F2AEECC29000F5F40 /* PostStorage.xcdatamodel */,
+			);
+			currentVersion = F39A968F2AEECC29000F5F40 /* PostStorage.xcdatamodel */;
+			name = PostStorage.xcdatamodeld;
+			path = ../../../../../../Desktop/FavorietsModule/PostStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F3A1A8BA2AE008080055BD2D /* Project object */;
 }

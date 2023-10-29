@@ -11,6 +11,8 @@ class PostTableViewCell: UITableViewCell {
 
     private var post: Post!
     
+    private var isTapped = false
+    
     private lazy var postNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -140,21 +142,16 @@ class PostTableViewCell: UITableViewCell {
         ])
     }
     
-    
-    
-    
-    
-    
-    
+  
     
     @objc
     private func addLikes() {
 
-//        CoreDataManager.shared.addToFavorites(originPost: post)
-//
-//        isTapped.toggle()
-//        let name = isTapped ? "heart.fill" : "heart"
-//        tapLikeButton.setImage(UIImage(systemName: name), for: .normal)
+        CoreDataManager.shared.createNewFavorite(post)
+        CoreDataManager.shared.save()
+        isTapped.toggle()
+        let name = isTapped ? "heart.fill" : "heart"
+        tapLikeButton.setImage(UIImage(systemName: name), for: .normal)
     }
     
 }
