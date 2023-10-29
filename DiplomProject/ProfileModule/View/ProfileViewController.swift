@@ -22,6 +22,8 @@ class ProfileViewController: UIViewController {
     
     private var listPost = Post2.make()
     private var listPhoto = Photo.makeCollectionPhotos()
+    private let settingManager = SettingManager.shared
+    private let header = ProfileHeaderView()
     
     private lazy var table: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
@@ -60,11 +62,18 @@ class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if settingManager.isNeedUpdate {
+            header.updateInfo() // TODO: user добавить
+            settingManager.isNeedUpdate = false
+        }
+    }
     
     private func setupView() {
         view.addSubview(table)
     }
-    
+
     
     private func setupConstraints() {
         
@@ -109,7 +118,6 @@ extension ProfileViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = ProfileHeaderView()
         header.setupView(user: user) //как здесь правильно прописать?
         header.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
         header.layer.cornerRadius = 30
@@ -127,7 +135,11 @@ extension ProfileViewController: UITableViewDelegate {
 extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        section == 0 ? 1 : listPost.count
+        if section == 0 || section == 1 {
+            return 1
+        } else {
+            return listPost.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -137,6 +149,14 @@ extension ProfileViewController: UITableViewDataSource {
             cell.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
             cell.layer.cornerRadius = 30
             return cell
+        }
+        else if indexPath.section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.identifier) as? PhotosTableViewCell else { return UITableViewCell()}
+                        cell.delegate = self
+                        cell.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
+                        cell.layer.cornerRadius = 30
+                        return cell
+
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier) as? PostTableViewCell else { return UITableViewCell()}
             cell.setupCell(listPost[indexPath.row])
@@ -147,7 +167,7 @@ extension ProfileViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        3
     }
 }
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F34B27192AE83CCD0088F5C8 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27182AE83CCD0088F5C8 /* UserSettings.swift */; };
 		F34B271B2AE8704E0088F5C8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271A2AE8704E0088F5C8 /* TabBarController.swift */; };
 		F34B271D2AE879AB0088F5C8 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */; };
 		F34B27202AE946670088F5C8 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */; };
@@ -24,6 +23,7 @@
 		F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */; };
 		F34B273E2AE987E30088F5C8 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B273D2AE987E30088F5C8 /* MediaPlayer.swift */; };
 		F34B27402AEA6FC50088F5C8 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B273F2AEA6FC50088F5C8 /* MusicPlayerViewController.swift */; };
+		F39A96812AEE4D8E000F5F40 /* SettiingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96802AEE4D8E000F5F40 /* SettiingManager.swift */; };
 		F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C52AE008080055BD2D /* AppDelegate.swift */; };
 		F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */; };
 		F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C92AE008080055BD2D /* LoginViewController.swift */; };
@@ -56,7 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F34B27182AE83CCD0088F5C8 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		F34B271A2AE8704E0088F5C8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		F34B273D2AE987E30088F5C8 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		F34B273F2AEA6FC50088F5C8 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		F39A96802AEE4D8E000F5F40 /* SettiingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettiingManager.swift; sourceTree = "<group>"; };
 		F3A1A8C22AE008080055BD2D /* DiplomProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiplomProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A1A8C52AE008080055BD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E9B7A12AE6B50600FAA97A /* SettingsProfileViewController.swift */,
-				F34B27182AE83CCD0088F5C8 /* UserSettings.swift */,
+				F39A96802AEE4D8E000F5F40 /* SettiingManager.swift */,
 			);
 			path = SettingsProfileModule;
 			sourceTree = "<group>";
@@ -431,11 +431,11 @@
 				F3A1A9042AE025900055BD2D /* RegistrationViewController.swift in Sources */,
 				F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */,
 				F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */,
-				F34B27192AE83CCD0088F5C8 /* UserSettings.swift in Sources */,
 				F3A1A8F32AE015240055BD2D /* RegistrationAlert.swift in Sources */,
 				F3E9B7932AE26F4400FAA97A /* PhotosGalleryDelegateProtocol.swift in Sources */,
 				F34B271D2AE879AB0088F5C8 /* FriendsTableViewCell.swift in Sources */,
 				F3E9B7A22AE6B50600FAA97A /* SettingsProfileViewController.swift in Sources */,
+				F39A96812AEE4D8E000F5F40 /* SettiingManager.swift in Sources */,
 				F3A1A8FF2AE0166C0055BD2D /* ProfileViewController.swift in Sources */,
 				F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */,
 				F3A1A9022AE016DD0055BD2D /* ExtentionUIColor.swift in Sources */,

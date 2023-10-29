@@ -34,7 +34,7 @@ class TabBarController: UITabBarController {
     
     func setupControllers() {
         
-        guard var profile = profileVC else {return}
+        guard let profile = profileVC else {return}
         
         profile.tabBarItem.title = "Профайл"
         mediaVC.tabBarItem.title = "Медиа"

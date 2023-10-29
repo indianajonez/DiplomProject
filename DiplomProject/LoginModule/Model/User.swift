@@ -13,6 +13,7 @@ class User {
     var fullName: String
     var avatar: UIImage?
     
+    
     init(login: String, fullName: String) {
         self.login = login
         self.fullName = fullName

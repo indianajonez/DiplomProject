@@ -16,8 +16,10 @@ class SettingsProfileViewController: UIViewController {
     
     //MARK: - Private properties
     
+    private let settingManager = SettingManager.shared
+    
     private lazy var scrollView: UIScrollView = {
-       let scroll = UIScrollView()
+        let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.alwaysBounceVertical = true
         return scroll
@@ -40,22 +42,39 @@ class SettingsProfileViewController: UIViewController {
         image.layer.borderWidth = 3
         image.layer.borderColor = UIColor.systemGray3.cgColor
         image.layer.backgroundColor = UIColor.systemGray3.cgColor
-//        var icon1 = UIImage(named: "pluss.png")
-//        image.image = icon1
-//        image.contentMode = .scaleAspectFit
-//        image.image = UIImage(named: "plus.png")
+        //        var icon1 = UIImage(named: "pluss.png")
+        //        image.image = icon1
+        //        image.contentMode = .scaleAspectFit
+        //        image.image = UIImage(named: "plus.png")
         return image
     }()
     
-    private lazy var plusView: UIImageView = {
-       let plusView = UIImageView()
-        plusView.translatesAutoresizingMaskIntoConstraints =  false
-        plusView.image = UIImage(named: "plus.png")
-        plusView.tintColor = .white
-        plusView.contentMode = .scaleAspectFit
-        
-        return plusView
+//    private lazy var plusView: UIImageView = {
+//        let plusView = UIImageView()
+//        plusView.translatesAutoresizingMaskIntoConstraints =  false
+//        plusView.image = UIImage(named: "plus.png")
+//        plusView.tintColor = .white
+//        plusView.contentMode = .scaleAspectFit
+//        return plusView
+//    }()
+    
+    private lazy var plusView: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "plus.png"), for: .normal)
+        button.addTarget(self, action: #selector(openImagePicker), for: .touchUpInside)
+        return button
     }()
+    
+    @objc
+    private func openImagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true)
+    }
+    
+    
     
     private lazy var titleUserName: UILabel = {
         let label = UILabel()
@@ -80,7 +99,7 @@ class SettingsProfileViewController: UIViewController {
         line.layer.borderWidth = 1
         line.layer.borderColor = UIColor.systemGray3.cgColor
         line.layer.backgroundColor = UIColor.systemGray3.cgColor
-       
+        
         return line
     }()
     
@@ -107,7 +126,7 @@ class SettingsProfileViewController: UIViewController {
         line.layer.borderWidth = 1
         line.layer.borderColor = UIColor.systemGray3.cgColor
         line.layer.backgroundColor = UIColor.systemGray3.cgColor
-       
+        
         return line
     }()
     
@@ -134,29 +153,34 @@ class SettingsProfileViewController: UIViewController {
         line.layer.borderWidth = 1
         line.layer.borderColor = UIColor.systemGray3.cgColor
         line.layer.backgroundColor = UIColor.systemGray3.cgColor
-       
+        
         return line
     }()
     
     private lazy var saveSettingsButton: UIButton = {
-       let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = true
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .black
         button.layer.cornerRadius = 10
-        button.setTitle("СОЗРАНИТЬ", for: .normal)
+        button.setTitle("СОХРАНИТЬ", for: .normal)
         button.addTarget(self, action: #selector(self.didTapSavedButton), for: .touchUpInside)
         return button
         
     }()
     
     //MARK: - Life cycles
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Настройки"
         self.view.backgroundColor = UIColor.white
         setupView()
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupInfo()
     }
     
     override func viewDidLayoutSubviews() {
@@ -167,23 +191,29 @@ class SettingsProfileViewController: UIViewController {
     
     //MARK: - Public methods
     
-    func setUserInformation(user: UserSettings) {
-        self.textFieldName.text = user.name
-//        self.addPhotoImageView.image = UIImageView(image: user.photo)
-        self.textFieldAboutUser.text = user.aboutUser
-        self.textFieldAge.text = user.age
-    }
     
     
     //MARK: - Private methods
     
+    private func setupInfo() {
+        self.textFieldName.text = settingManager.name
+        self.addPhotoImageView.image = settingManager.image
+        self.textFieldAge.text = settingManager.age
+        self.textFieldAboutUser.text = settingManager.aboutUser
+    }
+    
     @objc
     private func didTapSavedButton() {
-        
+        settingManager.name = self.textFieldName.text
+        settingManager.image = self.addPhotoImageView.image
+        settingManager.age = self.textFieldAge.text
+        settingManager.aboutUser = self.textFieldAboutUser.text
+        settingManager.isNeedUpdate = true
+        navigationController?.popViewController(animated: true)
     }
     
     
-    func setupGradient() {
+    private func setupGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = saveSettingsButton.bounds
         gradient.cornerRadius = 10
@@ -198,7 +228,7 @@ class SettingsProfileViewController: UIViewController {
         scrollView.addSubview(titleUserName)
         scrollView.addSubview(textFieldName)
         scrollView.addSubview(breakline)
-        addPhotoImageView.addSubview(plusView)
+        scrollView.addSubview(plusView)
         scrollView.addSubview(titleInformationAboutUser)
         scrollView.addSubview(textFieldAboutUser)
         scrollView.addSubview(breakline2)
@@ -211,7 +241,7 @@ class SettingsProfileViewController: UIViewController {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-        
+            
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
@@ -272,12 +302,21 @@ class SettingsProfileViewController: UIViewController {
             breakline3.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -240),
             breakline3.heightAnchor.constraint(equalToConstant: 2),
             
-//            saveSettingsButton.topAnchor.constraint(equalTo: breakline3.bottomAnchor, constant: 30),
-//            saveSettingsButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-//            saveSettingsButton.heightAnchor.constraint(equalToConstant: 50),
-//            saveSettingsButton.widthAnchor.constraint(equalToConstant: 100),
+            saveSettingsButton.topAnchor.constraint(equalTo: breakline3.bottomAnchor, constant: 30),
+            saveSettingsButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            saveSettingsButton.heightAnchor.constraint(equalToConstant: 50),
+            saveSettingsButton.widthAnchor.constraint(equalToConstant: 100),
+            saveSettingsButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -10)
             
         ])
     }
 }
 
+extension SettingsProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        dismiss(animated: true)
+        self.addPhotoImageView.image = image
+    }
+}

@@ -9,7 +9,7 @@ import UIKit
 
 class PhotosViewController: UIViewController {
     
-    private var imageList: [UIImage] = []
+    private var imageList: [UIImage] = Photo.makeCollectioinPhotos()
     
 //    lazy var allPhotos = Photo.makeCollectioinPhotos()
     

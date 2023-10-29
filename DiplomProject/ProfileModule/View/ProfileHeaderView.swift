@@ -108,6 +108,13 @@ class ProfileHeaderView: UIView {
         }
     }
     
+    func updateInfo() {
+        self.avatarImage.image = SettingManager.shared.image
+        self.labelAboutUser.text = SettingManager.shared.aboutUser
+        self.labelAge.text = SettingManager.shared.age
+        self.labelUserName.text = SettingManager.shared.name
+    }
+    
     // MARK: - Private methods
     
     private func setupConstraints() {

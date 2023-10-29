@@ -143,7 +143,7 @@ extension PhotosTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCollectionViewCell.identifier, for: indexPath) as? PhotosCollectionViewCell else {return UICollectionViewCell()}
         
-        if let image = collectionPhotos[indexPath.item].image {
+        if let image = collectionPhotos[indexPath.row].image {
             cell.setupCollectionCell(image)
         }
 //      cell.setupCollectionCell(collectionPhotos[indexPath.item].image!)
