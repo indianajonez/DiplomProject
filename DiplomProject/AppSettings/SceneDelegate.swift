@@ -20,21 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow (windowScene: scene)
         self.window = window
         window.makeKeyAndVisible()
-        let tabBarController = TabBarController()
-//        let loginViewController = LoginViewController(checkerService: CheckerService())
-//        let profileVC = ProfileViewController(user: User(login: "", fullName: ""))
-//        let mediaVC = MediaPlayerViewController()
-//        let favorietsVC = FavorietsViewController()
-
-//        let viewControllers = [ profileVC, mediaVC, favorietsVC]
-//
-//        tabBarController.viewControllers = viewControllers
-//        window.rootViewController = tabBarController
         
-//        let navigation = UINavigationController(rootViewController: LoginViewController(checkerService: CheckerService()))
-//        window.rootViewController = navigation
-        
-                window.rootViewController = TabBarController()
+        let navigation = UINavigationController(rootViewController: LoginViewController(checkerService: CheckerService()))
+        window.rootViewController = navigation
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

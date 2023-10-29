@@ -113,22 +113,9 @@ class LoginViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true)
         
         Auth.auth().addStateDidChangeListener{ auth, user in // заходим в профайл если данные получены корректно
-            //
             
         }
     }
-    
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        super.viewWillAppear(animated)
-    //        NotificationCenter.default.addObserver(self, selector: #selector(kbdShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-    //        NotificationCenter.default.addObserver(self, selector: #selector(kbdHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    //    }
-    
-    //    override func viewDidDisappear(_ animated: Bool) {
-    //        super.viewDidDisappear(animated)
-    //        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-    //        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    //    }
     
     //MARK: Private methods
     
@@ -217,7 +204,8 @@ class LoginViewController: UIViewController {
                 return
             }
             let profileVC = ProfileViewController(user: user)
-            self.navigationController?.pushViewController(profileVC, animated: true)
+            self.navigationController?.pushViewController(TabBarController(profileVC: profileVC), animated: true)
+//            self.navigationController?.pushViewController(profileVC, animated: true)
             // прописать переход через координатор в TabBarController
         }
         
