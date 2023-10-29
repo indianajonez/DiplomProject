@@ -42,21 +42,8 @@ class SettingsProfileViewController: UIViewController {
         image.layer.borderWidth = 3
         image.layer.borderColor = UIColor.systemGray3.cgColor
         image.layer.backgroundColor = UIColor.systemGray3.cgColor
-        //        var icon1 = UIImage(named: "pluss.png")
-        //        image.image = icon1
-        //        image.contentMode = .scaleAspectFit
-        //        image.image = UIImage(named: "plus.png")
         return image
     }()
-    
-//    private lazy var plusView: UIImageView = {
-//        let plusView = UIImageView()
-//        plusView.translatesAutoresizingMaskIntoConstraints =  false
-//        plusView.image = UIImage(named: "plus.png")
-//        plusView.tintColor = .white
-//        plusView.contentMode = .scaleAspectFit
-//        return plusView
-//    }()
     
     private lazy var plusView: UIButton = {
         let button = UIButton()
@@ -168,7 +155,17 @@ class SettingsProfileViewController: UIViewController {
         
     }()
     
+    private var user: User?
     //MARK: - Life cycles
+    
+    init(user: User?) {
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -196,18 +193,20 @@ class SettingsProfileViewController: UIViewController {
     //MARK: - Private methods
     
     private func setupInfo() {
-        self.textFieldName.text = settingManager.name
-        self.addPhotoImageView.image = settingManager.image
-        self.textFieldAge.text = settingManager.age
-        self.textFieldAboutUser.text = settingManager.aboutUser
+        guard let user = self.user else {return}
+        self.textFieldName.text = user.name
+        self.addPhotoImageView.image = user.avatar
+        self.textFieldAge.text = user.age
+        self.textFieldAboutUser.text = user.aboutUser
     }
     
     @objc
     private func didTapSavedButton() {
-        settingManager.name = self.textFieldName.text
-        settingManager.image = self.addPhotoImageView.image
-        settingManager.age = self.textFieldAge.text
-        settingManager.aboutUser = self.textFieldAboutUser.text
+        guard let user = self.user else {return}
+        user.name = self.textFieldName.text
+        user.avatar = self.addPhotoImageView.image
+        user.age = self.textFieldAge.text
+        user.aboutUser = self.textFieldAboutUser.text
         settingManager.isNeedUpdate = true
         navigationController?.popViewController(animated: true)
     }
@@ -218,7 +217,7 @@ class SettingsProfileViewController: UIViewController {
         gradient.frame = saveSettingsButton.bounds
         gradient.cornerRadius = 10
         gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemRed.cgColor]
-        saveSettingsButton.layer.addSublayer(gradient)
+        saveSettingsButton.layer.insertSublayer(gradient, at: 0)
     }
     
     private func setupView() {
@@ -311,6 +310,8 @@ class SettingsProfileViewController: UIViewController {
         ])
     }
 }
+
+//
 
 extension SettingsProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

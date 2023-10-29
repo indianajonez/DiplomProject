@@ -24,6 +24,10 @@
 		F34B273E2AE987E30088F5C8 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B273D2AE987E30088F5C8 /* MediaPlayer.swift */; };
 		F34B27402AEA6FC50088F5C8 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B273F2AEA6FC50088F5C8 /* MusicPlayerViewController.swift */; };
 		F39A96812AEE4D8E000F5F40 /* SettiingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96802AEE4D8E000F5F40 /* SettiingManager.swift */; };
+		F39A96832AEE793F000F5F40 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96822AEE793F000F5F40 /* FriendsViewController.swift */; };
+		F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96842AEE7B73000F5F40 /* Friends.swift */; };
+		F39A96872AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */; };
+		F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */; };
 		F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C52AE008080055BD2D /* AppDelegate.swift */; };
 		F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */; };
 		F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C92AE008080055BD2D /* LoginViewController.swift */; };
@@ -73,6 +77,10 @@
 		F34B273D2AE987E30088F5C8 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		F34B273F2AEA6FC50088F5C8 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		F39A96802AEE4D8E000F5F40 /* SettiingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettiingManager.swift; sourceTree = "<group>"; };
+		F39A96822AEE793F000F5F40 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F39A96842AEE7B73000F5F40 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsgalleryDelegateProtocol.swift; sourceTree = "<group>"; };
+		F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F3A1A8C22AE008080055BD2D /* DiplomProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiplomProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A1A8C52AE008080055BD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -285,6 +293,7 @@
 				F3A1A8FE2AE0166C0055BD2D /* ProfileViewController.swift */,
 				F3E9B78D2AE1971D00FAA97A /* ProfileHeaderView.swift */,
 				F3E9B7982AE27D6000FAA97A /* Photos.swift */,
+				F39A96842AEE7B73000F5F40 /* Friends.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,7 +323,10 @@
 				F3E9B7942AE26FAE00FAA97A /* PostTableViewCell.swift */,
 				F3E9B79A2AE2847F00FAA97A /* PhotosCollectionViewCell.swift */,
 				F3E9B79E2AE288C800FAA97A /* PhotosViewController.swift */,
+				F39A96822AEE793F000F5F40 /* FriendsViewController.swift */,
 				F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */,
+				F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */,
+				F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */,
 			);
 			path = TableViewStyle;
 			sourceTree = "<group>";
@@ -417,10 +429,13 @@
 				F3E9B7972AE2783100FAA97A /* Post2.swift in Sources */,
 				F3E9B79F2AE288C800FAA97A /* PhotosViewController.swift in Sources */,
 				F3E9B79B2AE2847F00FAA97A /* PhotosCollectionViewCell.swift in Sources */,
+				F39A96872AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift in Sources */,
 				F3E9B79D2AE2879000FAA97A /* ExtentionUIView.swift in Sources */,
+				F39A96832AEE793F000F5F40 /* FriendsViewController.swift in Sources */,
 				F3E9B7912AE26E8D00FAA97A /* PhotosTableViewCell.swift in Sources */,
 				F3A1A8ED2AE0144D0055BD2D /* UserServiceProtocol.swift in Sources */,
 				F3E9B7952AE26FAE00FAA97A /* PostTableViewCell.swift in Sources */,
+				F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */,
 				F34B27382AE9580D0088F5C8 /* Song.swift in Sources */,
 				F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */,
 				F3E9B7992AE27D6000FAA97A /* Photos.swift in Sources */,
@@ -429,6 +444,7 @@
 				F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */,
 				F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */,
 				F3A1A9042AE025900055BD2D /* RegistrationViewController.swift in Sources */,
+				F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */,
 				F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */,
 				F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */,
 				F3A1A8F32AE015240055BD2D /* RegistrationAlert.swift in Sources */,

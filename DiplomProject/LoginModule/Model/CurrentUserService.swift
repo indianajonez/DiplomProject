@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class CurrentUserService: UserServiceProtocol {
     
@@ -16,6 +17,8 @@ class CurrentUserService: UserServiceProtocol {
     }
     
     func checkLogin(login: String) -> User? {
-        login == "K" ? User(login: "K", fullName: "Ekaterina") : nil
+        // login == "K" ? User(login: "K", fullName: "Ekaterina", avatar: UIImage(named: "Kate"), age: "")) : nil
+        //}
+        return user
     }
 }

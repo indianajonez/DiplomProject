@@ -85,12 +85,21 @@ class ProfileHeaderView: UIView {
         return view
     }()
     
+//    private lazy var userStackView: UIStackView = {
+//        let v = UIStackView(arrangedSubviews: [labelUserName, labelAboutUser, labelAge])
+//        v.translatesAutoresizingMaskIntoConstraints = false
+//        v.axis = .horizontal
+//        v.distribution = .equalSpacing
+//        v.spacing = 20
+//        return v
+//    }()
+    
     
     // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        [avatarImage, fullNameLabel, labelUserName, labelAboutUser, iconAge, iconAboutUser, labelAge, iconEmail].forEach{addSubview($0)}
+        [ fullNameLabel, labelUserName, labelAboutUser, labelAge, avatarImage, iconAge, iconAboutUser, iconEmail].forEach{addSubview($0)} //   userStackView,
         setupConstraints()
     }
     
@@ -105,14 +114,18 @@ class ProfileHeaderView: UIView {
         if let user = user {
             self.fullNameLabel.text = user.fullName
             self.avatarImage.image = user.avatar
+            self.labelUserName.text = user.name 
+            self.labelAboutUser.text = user.aboutUser
+            self.labelAge.text = user.age
         }
     }
     
-    func updateInfo() {
-        self.avatarImage.image = SettingManager.shared.image
-        self.labelAboutUser.text = SettingManager.shared.aboutUser
-        self.labelAge.text = SettingManager.shared.age
-        self.labelUserName.text = SettingManager.shared.name
+    func updateInfo(user: User?) {
+        guard let user = user else {return}
+        self.avatarImage.image = user.avatar
+        self.labelAboutUser.text = user.aboutUser
+        self.labelAge.text = user.age
+        self.labelUserName.text = user.name
     }
     
     // MARK: - Private methods
@@ -145,6 +158,10 @@ class ProfileHeaderView: UIView {
             
             fullNameLabel.topAnchor.constraint(equalTo: labelAge.bottomAnchor, constant: 15),
             fullNameLabel.leadingAnchor.constraint(equalTo: iconEmail.trailingAnchor, constant: 8),
+            
+//            userStackView.leadingAnchor.constraint(equalTo: avatarImage.leadingAnchor, constant: 32),
+//            userStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
+//            userStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 10)
 
         ])
         

@@ -3,4 +3,54 @@
    uuid = "DED08D3B-2FAD-4761-B677-FE6FAE4A2BDC"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A67825DF-E3E0-44AF-A1D6-BB28A7D86873"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DiplomProject/ProfileModule/View/TableViewStyle/FriendsTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "FriendsTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A67825DF-E3E0-44AF-A1D6-BB28A7D86873 - 60ed8cbf616ff5d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DiplomProject.FriendsTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; DiplomProject.FriendsTableViewCell"
+                  moduleName = "DiplomProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekaterinasaveleva/Documents/Developer/Diplom/DiplomProject/DiplomProject/ProfileModule/View/TableViewStyle/FriendsTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "A67825DF-E3E0-44AF-A1D6-BB28A7D86873 - 8db91156805fee93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DiplomProject.FriendsTableViewCell.init(coder: __C.NSCoder) -&gt; DiplomProject.FriendsTableViewCell"
+                  moduleName = "DiplomProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekaterinasaveleva/Documents/Developer/Diplom/DiplomProject/DiplomProject/ProfileModule/View/TableViewStyle/FriendsTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

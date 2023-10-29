@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
     
     
     // MARK: - Public properties
-
+    
     
     let user: User?
     
@@ -21,7 +21,8 @@ class ProfileViewController: UIViewController {
     // MARK: - Privte properties
     
     private var listPost = Post2.make()
-    private var listPhoto = Photo.makeCollectionPhotos()
+    private var listfFiendsPhoto = Photo.makeCollectionPhotos(type: .friends)
+    private var listPhoto = Photo.makeCollectionPhotos(type: .photo)
     private let settingManager = SettingManager.shared
     private let header = ProfileHeaderView()
     
@@ -32,6 +33,7 @@ class ProfileViewController: UIViewController {
         table.dataSource = self
         table.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
         table.register(PhotosTableViewCell.self, forCellReuseIdentifier: PhotosTableViewCell.identifier)
+        table.register(FriendsTableViewCell.self, forCellReuseIdentifier: FriendsTableViewCell.identifier)
         table.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
         return table
     }()
@@ -41,11 +43,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-//        navigationItem.title = "ProfileView"
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Мой профайл"
-        print(user?.fullName ?? "Not full name")
         setupView()
         setupConstraints()
         makeBarButtonItems()
@@ -65,7 +65,7 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if settingManager.isNeedUpdate {
-            header.updateInfo() // TODO: user добавить
+            header.updateInfo(user: self.user)
             settingManager.isNeedUpdate = false
         }
     }
@@ -73,7 +73,7 @@ class ProfileViewController: UIViewController {
     private func setupView() {
         view.addSubview(table)
     }
-
+    
     
     private func setupConstraints() {
         
@@ -88,7 +88,7 @@ class ProfileViewController: UIViewController {
     @objc private func makeBarButtonItems() {
         let edit = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(editTapped))
         let logout = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .plain, target: self, action: #selector(logoutTapped))
-
+        
         navigationItem.rightBarButtonItems = [logout, edit]
         edit.tintColor = .black
         logout.tintColor = .black
@@ -96,7 +96,7 @@ class ProfileViewController: UIViewController {
     
     @objc
     func editTapped() {
-        let settingsProfileVC = SettingsProfileViewController()
+        let settingsProfileVC = SettingsProfileViewController(user: self.user)
         navigationController?.pushViewController(settingsProfileVC, animated: true)
     }
     
@@ -144,7 +144,7 @@ extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.identifier) as? PhotosTableViewCell else { return UITableViewCell()}
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendsTableViewCell.identifier) as? FriendsTableViewCell else { return UITableViewCell()}
             cell.delegate = self
             cell.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
             cell.layer.cornerRadius = 30
@@ -152,11 +152,11 @@ extension ProfileViewController: UITableViewDataSource {
         }
         else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.identifier) as? PhotosTableViewCell else { return UITableViewCell()}
-                        cell.delegate = self
-                        cell.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
-                        cell.layer.cornerRadius = 30
-                        return cell
-
+            cell.delegate = self
+            cell.backgroundColor = UIColor.createColor(lightMode: .systemGray6, darkMode: .black)
+            cell.layer.cornerRadius = 30
+            return cell
+            
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier) as? PostTableViewCell else { return UITableViewCell()}
             cell.setupCell(listPost[indexPath.row])
@@ -176,9 +176,17 @@ extension ProfileViewController: UITableViewDataSource {
 extension ProfileViewController: PhotosGalleryDelegateProtocol {
     
     func openGallery() {
-        print(#function)
         let galleryVC = PhotosViewController()
         navigationController?.pushViewController(galleryVC, animated: true)
+    }
+}
+
+// MARK: - FriendsGalleryDelegate
+
+extension ProfileViewController: FriendsGalleryDelegateProtocol {
+    func openFriends() {
+        let friendsVC = FriendsViewController()
+        navigationController?.pushViewController(friendsVC, animated: true)
     }
     
 }

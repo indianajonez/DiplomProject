@@ -10,14 +10,20 @@ import UIKit
 class User {
     
     var login: String
-    var fullName: String
+    var name: String?
+    var fullName: String?
     var avatar: UIImage?
+    var age: String?
+    var aboutUser: String?
     
     
-    init(login: String, fullName: String) {
+    init(login: String, fullName: String, avatar: UIImage = UIImage(), age: String = " ", aboutUser: String = " ", name: String = " ") {
+        self.name = name
         self.login = login
         self.fullName = fullName
-        self.avatar = UIImage(named: "Kate")
+        self.avatar = avatar
+        self.aboutUser = aboutUser
+        self.age = age
  
     }
     

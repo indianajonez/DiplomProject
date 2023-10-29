@@ -15,7 +15,7 @@ class PhotosTableViewCell: UITableViewCell {
     
     //MARK: - Private properties
     
-    private let collectionPhotos = Photo.makeCollectionPhotos()
+    private let collectionPhotos = Photo.makeCollectionPhotos(type: .photo)
     
     // описание ячейки
     
@@ -29,7 +29,7 @@ class PhotosTableViewCell: UITableViewCell {
         let name = UILabel()
         name.textColor = UIColor.createColor(lightMode: .black, darkMode: .white)
         name.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        name.text = "Фото"
+        name.text = "ФОТО"
         name.translatesAutoresizingMaskIntoConstraints = false
         return name
     }()
