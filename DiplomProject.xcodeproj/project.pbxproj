@@ -11,13 +11,6 @@
 		F34B271D2AE879AB0088F5C8 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */; };
 		F34B27202AE946670088F5C8 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */; };
 		F34B27232AE948810088F5C8 /* FavorietsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27222AE948810088F5C8 /* FavorietsViewController.swift */; };
-		F34B27292AE9571D0088F5C8 /* bensound-growingold.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F34B27272AE9571D0088F5C8 /* bensound-growingold.mp3 */; };
-		F34B272A2AE9571D0088F5C8 /* bensound-jumpingbean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F34B27282AE9571D0088F5C8 /* bensound-jumpingbean.mp3 */; };
-		F34B272F2AE957510088F5C8 /* bensound-jambomambo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F34B272C2AE957510088F5C8 /* bensound-jambomambo.mp3 */; };
-		F34B27302AE957510088F5C8 /* bensound-elevation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F34B272D2AE957510088F5C8 /* bensound-elevation.mp3 */; };
-		F34B27312AE957510088F5C8 /* bensound-everyminuteisaneternity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F34B272E2AE957510088F5C8 /* bensound-everyminuteisaneternity.mp3 */; };
-		F34B27352AE957760088F5C8 /* bensound-pleasewatchmyback.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F34B27332AE957760088F5C8 /* bensound-pleasewatchmyback.mp3 */; };
-		F34B27362AE957760088F5C8 /* bensound-itmighttakeawhile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F34B27342AE957760088F5C8 /* bensound-itmighttakeawhile.mp3 */; };
 		F34B27382AE9580D0088F5C8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27372AE9580D0088F5C8 /* Song.swift */; };
 		F34B273A2AE958650088F5C8 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27392AE958650088F5C8 /* Album.swift */; };
 		F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */; };
@@ -31,10 +24,16 @@
 		F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */; };
 		F39A968D2AEECB12000F5F40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */; };
 		F39A96902AEECC29000F5F40 /* PostStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F39A968E2AEECC29000F5F40 /* PostStorage.xcdatamodeld */; };
-		F39A96922AEED612000F5F40 /* FavorietsPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96912AEED612000F5F40 /* FavorietsPostTableViewCell.swift */; };
 		F39A969A2AEED9BF000F5F40 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F39A96992AEED9BF000F5F40 /* FirebaseAuth */; };
 		F39A969C2AEED9BF000F5F40 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F39A969B2AEED9BF000F5F40 /* FirebaseFirestore */; };
 		F39A969E2AEED9BF000F5F40 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F39A969D2AEED9BF000F5F40 /* FirebaseFirestoreSwift */; };
+		F39A96D02AEEE10F000F5F40 /* bensound-itmighttakeawhile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39A96CF2AEEE10F000F5F40 /* bensound-itmighttakeawhile.mp3 */; };
+		F39A96D22AEEE116000F5F40 /* bensound-pleasewatchmyback.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39A96D12AEEE116000F5F40 /* bensound-pleasewatchmyback.mp3 */; };
+		F39A96D42AEEE12F000F5F40 /* bensound-growingold.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39A96D32AEEE12F000F5F40 /* bensound-growingold.mp3 */; };
+		F39A96D62AEEE13A000F5F40 /* bensound-jumpingbean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39A96D52AEEE13A000F5F40 /* bensound-jumpingbean.mp3 */; };
+		F39A96D82AEEE154000F5F40 /* bensound-elevation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39A96D72AEEE154000F5F40 /* bensound-elevation.mp3 */; };
+		F39A96DA2AEEE161000F5F40 /* bensound-everyminuteisaneternity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39A96D92AEEE161000F5F40 /* bensound-everyminuteisaneternity.mp3 */; };
+		F39A96DC2AEEE171000F5F40 /* bensound-jambomambo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39A96DB2AEEE171000F5F40 /* bensound-jambomambo.mp3 */; };
 		F3A1A8C62AE008080055BD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C52AE008080055BD2D /* AppDelegate.swift */; };
 		F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */; };
 		F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8C92AE008080055BD2D /* LoginViewController.swift */; };
@@ -68,13 +67,6 @@
 		F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
 		F34B27222AE948810088F5C8 /* FavorietsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorietsViewController.swift; sourceTree = "<group>"; };
-		F34B27272AE9571D0088F5C8 /* bensound-growingold.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-growingold.mp3"; path = "../../../../../../Downloads/bensound-growingold.mp3"; sourceTree = "<group>"; };
-		F34B27282AE9571D0088F5C8 /* bensound-jumpingbean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-jumpingbean.mp3"; path = "../../../../../../Downloads/bensound-jumpingbean.mp3"; sourceTree = "<group>"; };
-		F34B272C2AE957510088F5C8 /* bensound-jambomambo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-jambomambo.mp3"; path = "../../../../../../Downloads/bensound-jambomambo.mp3"; sourceTree = "<group>"; };
-		F34B272D2AE957510088F5C8 /* bensound-elevation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-elevation.mp3"; path = "../../../../../../Downloads/bensound-elevation.mp3"; sourceTree = "<group>"; };
-		F34B272E2AE957510088F5C8 /* bensound-everyminuteisaneternity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-everyminuteisaneternity.mp3"; path = "../../../../../../Downloads/bensound-everyminuteisaneternity.mp3"; sourceTree = "<group>"; };
-		F34B27332AE957760088F5C8 /* bensound-pleasewatchmyback.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-pleasewatchmyback.mp3"; path = "../../../../../../Downloads/bensound-pleasewatchmyback.mp3"; sourceTree = "<group>"; };
-		F34B27342AE957760088F5C8 /* bensound-itmighttakeawhile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-itmighttakeawhile.mp3"; path = "../../../../../../Downloads/bensound-itmighttakeawhile.mp3"; sourceTree = "<group>"; };
 		F34B27372AE9580D0088F5C8 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		F34B27392AE958650088F5C8 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,7 +80,13 @@
 		F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavorietsPostTableViewCell.swift; path = ../../../../../../Desktop/FavorietsModule/FavorietsPostTableViewCell.swift; sourceTree = "<group>"; };
 		F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = ../../../../../../Desktop/FavorietsModule/CoreDataManager.swift; sourceTree = "<group>"; };
 		F39A968F2AEECC29000F5F40 /* PostStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostStorage.xcdatamodel; sourceTree = "<group>"; };
-		F39A96912AEED612000F5F40 /* FavorietsPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorietsPostTableViewCell.swift; sourceTree = "<group>"; };
+		F39A96CF2AEEE10F000F5F40 /* bensound-itmighttakeawhile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-itmighttakeawhile.mp3"; path = "../../../../../../Downloads/bensound-itmighttakeawhile.mp3"; sourceTree = "<group>"; };
+		F39A96D12AEEE116000F5F40 /* bensound-pleasewatchmyback.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-pleasewatchmyback.mp3"; path = "../../../../../../Downloads/bensound-pleasewatchmyback.mp3"; sourceTree = "<group>"; };
+		F39A96D32AEEE12F000F5F40 /* bensound-growingold.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-growingold.mp3"; path = "../../../../../../Downloads/bensound-growingold.mp3"; sourceTree = "<group>"; };
+		F39A96D52AEEE13A000F5F40 /* bensound-jumpingbean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-jumpingbean.mp3"; path = "../../../../../../Downloads/bensound-jumpingbean.mp3"; sourceTree = "<group>"; };
+		F39A96D72AEEE154000F5F40 /* bensound-elevation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-elevation.mp3"; path = "../../../../../../Downloads/bensound-elevation.mp3"; sourceTree = "<group>"; };
+		F39A96D92AEEE161000F5F40 /* bensound-everyminuteisaneternity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-everyminuteisaneternity.mp3"; path = "../../../../../../Downloads/bensound-everyminuteisaneternity.mp3"; sourceTree = "<group>"; };
+		F39A96DB2AEEE171000F5F40 /* bensound-jambomambo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-jambomambo.mp3"; path = "../../../../../../Downloads/bensound-jambomambo.mp3"; sourceTree = "<group>"; };
 		F3A1A8C22AE008080055BD2D /* DiplomProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiplomProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A1A8C52AE008080055BD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A1A8C72AE008080055BD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,30 +155,30 @@
 			path = FavorietsModule;
 			sourceTree = "<group>";
 		};
-		F34B27262AE956E20088F5C8 /* jazz */ = {
+		F39A96C82AEEE0D3000F5F40 /* cinematic */ = {
 			isa = PBXGroup;
 			children = (
-				F34B27272AE9571D0088F5C8 /* bensound-growingold.mp3 */,
-				F34B27282AE9571D0088F5C8 /* bensound-jumpingbean.mp3 */,
-			);
-			path = jazz;
-			sourceTree = "<group>";
-		};
-		F34B272B2AE957330088F5C8 /* cinematic */ = {
-			isa = PBXGroup;
-			children = (
-				F34B272D2AE957510088F5C8 /* bensound-elevation.mp3 */,
-				F34B272E2AE957510088F5C8 /* bensound-everyminuteisaneternity.mp3 */,
-				F34B272C2AE957510088F5C8 /* bensound-jambomambo.mp3 */,
+				F39A96DB2AEEE171000F5F40 /* bensound-jambomambo.mp3 */,
+				F39A96D72AEEE154000F5F40 /* bensound-elevation.mp3 */,
+				F39A96D92AEEE161000F5F40 /* bensound-everyminuteisaneternity.mp3 */,
 			);
 			path = cinematic;
 			sourceTree = "<group>";
 		};
-		F34B27322AE957620088F5C8 /* acoustic */ = {
+		F39A96C92AEEE0D6000F5F40 /* jazz */ = {
 			isa = PBXGroup;
 			children = (
-				F34B27342AE957760088F5C8 /* bensound-itmighttakeawhile.mp3 */,
-				F34B27332AE957760088F5C8 /* bensound-pleasewatchmyback.mp3 */,
+				F39A96D32AEEE12F000F5F40 /* bensound-growingold.mp3 */,
+				F39A96D52AEEE13A000F5F40 /* bensound-jumpingbean.mp3 */,
+			);
+			path = jazz;
+			sourceTree = "<group>";
+		};
+		F39A96CA2AEEE0D9000F5F40 /* acoustic */ = {
+			isa = PBXGroup;
+			children = (
+				F39A96D12AEEE116000F5F40 /* bensound-pleasewatchmyback.mp3 */,
+				F39A96CF2AEEE10F000F5F40 /* bensound-itmighttakeawhile.mp3 */,
 			);
 			path = acoustic;
 			sourceTree = "<group>";
@@ -205,9 +203,9 @@
 		F3A1A8C42AE008080055BD2D /* DiplomProject */ = {
 			isa = PBXGroup;
 			children = (
-				F34B272B2AE957330088F5C8 /* cinematic */,
-				F34B27262AE956E20088F5C8 /* jazz */,
-				F34B27322AE957620088F5C8 /* acoustic */,
+				F39A96CA2AEEE0D9000F5F40 /* acoustic */,
+				F39A96C92AEEE0D6000F5F40 /* jazz */,
+				F39A96C82AEEE0D3000F5F40 /* cinematic */,
 				F34B27212AE9485C0088F5C8 /* FavorietsModule */,
 				F34B271E2AE946230088F5C8 /* MediaPlayerModule */,
 				F3A1A8D32AE008090055BD2D /* Info.plist */,
@@ -337,7 +335,6 @@
 				F39A96822AEE793F000F5F40 /* FriendsViewController.swift */,
 				F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */,
 				F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */,
-				F39A96912AEED612000F5F40 /* FavorietsPostTableViewCell.swift */,
 				F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */,
 			);
 			path = TableViewStyle;
@@ -418,16 +415,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F34B27302AE957510088F5C8 /* bensound-elevation.mp3 in Resources */,
-				F34B27352AE957760088F5C8 /* bensound-pleasewatchmyback.mp3 in Resources */,
-				F34B27312AE957510088F5C8 /* bensound-everyminuteisaneternity.mp3 in Resources */,
-				F34B27292AE9571D0088F5C8 /* bensound-growingold.mp3 in Resources */,
+				F39A96DC2AEEE171000F5F40 /* bensound-jambomambo.mp3 in Resources */,
+				F39A96D22AEEE116000F5F40 /* bensound-pleasewatchmyback.mp3 in Resources */,
 				F3A1A8D22AE008090055BD2D /* LaunchScreen.storyboard in Resources */,
 				F3A1A8CF2AE008090055BD2D /* Assets.xcassets in Resources */,
-				F34B27362AE957760088F5C8 /* bensound-itmighttakeawhile.mp3 in Resources */,
-				F34B272F2AE957510088F5C8 /* bensound-jambomambo.mp3 in Resources */,
+				F39A96D42AEEE12F000F5F40 /* bensound-growingold.mp3 in Resources */,
+				F39A96D02AEEE10F000F5F40 /* bensound-itmighttakeawhile.mp3 in Resources */,
 				F3A1A8DA2AE00E8F0055BD2D /* GoogleService-Info.plist in Resources */,
-				F34B272A2AE9571D0088F5C8 /* bensound-jumpingbean.mp3 in Resources */,
+				F39A96DA2AEEE161000F5F40 /* bensound-everyminuteisaneternity.mp3 in Resources */,
+				F39A96D82AEEE154000F5F40 /* bensound-elevation.mp3 in Resources */,
+				F39A96D62AEEE13A000F5F40 /* bensound-jumpingbean.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +471,6 @@
 				F3E9B78E2AE1971D00FAA97A /* ProfileHeaderView.swift in Sources */,
 				F39A968D2AEECB12000F5F40 /* CoreDataManager.swift in Sources */,
 				F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */,
-				F39A96922AEED612000F5F40 /* FavorietsPostTableViewCell.swift in Sources */,
 				F34B27232AE948810088F5C8 /* FavorietsViewController.swift in Sources */,
 				F3A1A8F92AE015B60055BD2D /* LoginViewControllerDelegateError.swift in Sources */,
 				F34B27402AEA6FC50088F5C8 /* MusicPlayerViewController.swift in Sources */,
