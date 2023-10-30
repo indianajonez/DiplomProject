@@ -18,7 +18,7 @@
 ![RegistrationView](https://github.com/indianajonez/DiplomProject/blob/main/2.png)
 ### Данные
 ![LoginView](https://github.com/indianajonez/DiplomProject/blob/main/3.png)
-### Данные пользователя пустые
+### Данные пользователя в хедере пустые
 ![EmptyHeaderProfileView](https://github.com/indianajonez/DiplomProject/blob/main/4.png)
 ### Переходим в настройки
 ![EmptySettings](https://github.com/indianajonez/DiplomProject/blob/main/5.png)
