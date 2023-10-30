@@ -7,7 +7,7 @@
 
 import FirebaseAuth
 
-// абстракция, по которой проходит авторизация/регистрация юзера в систему
+// Абстракция, по которой проходит авторизация/регистрация юзера в систему
 protocol ChekerServiceProtocol {
     func logIn(email: String, pass: String, completion: @escaping(User?, _ errorString: String?) -> Void )
     func singUp(email: String, pass: String, completion: @escaping (Bool, _ errorString: String?) -> Void )
@@ -16,7 +16,11 @@ protocol ChekerServiceProtocol {
 }
 
 final class CheckerService: ChekerServiceProtocol {
+    
+    //MARK: - Public methods
+    
     // Зайти в систему с уже зарегистрированными логином и паролем
+    
     func logIn(email: String, pass: String, completion: @escaping (User?, String?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: pass) { authResult , error in
             if let error {
@@ -35,7 +39,8 @@ final class CheckerService: ChekerServiceProtocol {
             completion(newUser, nil)
         }
     }
-    // зарегистрироваться в системе с помощью почты и пароля
+    
+    // Зарегистрироваться в системе с помощью почты и пароля
     func singUp(email: String, pass: String, completion: @escaping (Bool, String?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: pass) { authResult, error in
             if let error = error {
@@ -66,5 +71,6 @@ final class CheckerService: ChekerServiceProtocol {
     // выйти из системы (firebase)
     func logout() {
         try? Auth.auth().signOut()
+        
     }
 }

@@ -1,26 +1,26 @@
 //
-//  FriendsTableViewCell.swift
+//  PhotosTableViewCell.swift
 //  DiplomProject
 //
-//  Created by Ekaterina Saveleva on 25.10.2023.
+//  Created by Ekaterina Saveleva on 20.10.2023.
 //
 
 import UIKit
 
-class FriendsTableViewCell: UITableViewCell {
+class PhotosTableViewCell: UITableViewCell {
     
     // MARK: - Public properties
     
-    weak var delegate: FriendsGalleryDelegateProtocol?
+    weak var delegate: PhotosGalleryDelegateProtocol?
     
     //MARK: - Private properties
     
-    private let collectionFriends: [Friends] = Friends.makeCollectionFriends()
+    private let collectionPhotos = Photo.makeCollectionPhotos(type: .photo)
     
-    // описание ячейки
+    // Описание ячейки
     
     private lazy var imageCollectionView: UIView = {
-        let view = UIView()
+       let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -29,7 +29,7 @@ class FriendsTableViewCell: UITableViewCell {
         let name = UILabel()
         name.textColor = UIColor.createColor(lightMode: .black, darkMode: .white)
         name.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        name.text = "ДРУЗЬЯ"
+        name.text = "ФОТО"
         name.translatesAutoresizingMaskIntoConstraints = false
         return name
     }()
@@ -37,27 +37,31 @@ class FriendsTableViewCell: UITableViewCell {
     private lazy var button: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "arrow.right.circle"), for: .normal)
+        button.setImage(UIImage(systemName: "arrow.right.circle"), for: .normal)      //(UIImage(named: "Кнопка"), for: .normal)
         button.tintColor = .black
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         return button
     }()
     
-    private lazy var imageCollection: UICollectionView = { // коллекция картинок
+    private lazy var imageCollection: UICollectionView = {
+        // Коллекция картинок
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal // горизонтальное расположение
+        // Горизонтальное расположение
+        layout.scrollDirection = .horizontal
         let imageCollection = UICollectionView(frame: .zero, collectionViewLayout: layout )
         imageCollection.translatesAutoresizingMaskIntoConstraints = false
-        imageCollection.delegate = self // кто будет реагировать на делегиварование
-        imageCollection.dataSource = self // хранилище дванных
+        // Кто будет реагировать на делегиварование
+        imageCollection.delegate = self
+        // Хранилище дванных
+        imageCollection.dataSource = self
         imageCollection.backgroundColor = UIColor.createColor(lightMode: .white, darkMode: .black)
-        imageCollection.register(FrinedsCollectionViewCell.self, forCellWithReuseIdentifier: FrinedsCollectionViewCell.identifier)
+        imageCollection.register(PhotosCollectionViewCell.self, forCellWithReuseIdentifier: PhotosCollectionViewCell.identifier)
         return imageCollection
     }()
     
     // MARK: - Init
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) { // момент создания ячеки блока с фотографиями
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) { // Момент создания ячеки блока с фотографиями
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupConstrains()
     }
@@ -65,7 +69,7 @@ class FriendsTableViewCell: UITableViewCell {
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Private methods
     
     @objc
@@ -102,58 +106,64 @@ class FriendsTableViewCell: UITableViewCell {
     }
     
 }
-
-
+    
+ 
 // MARK: - UICOllectionViewDelegateFlowLayout
 
-extension FriendsTableViewCell: UICollectionViewDelegateFlowLayout {
+extension PhotosTableViewCell: UICollectionViewDelegateFlowLayout {
     
     
     // MARK: - Private properties
     
-    private var sideInset: CGFloat {return 8} // что это?
+    private var sideInset: CGFloat {return 8}
     
     
     // MARK: - Public methods
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.bounds.width - sideInset * 5) / 4 // от ширины экрана отнимает все отступы (включая первый и последний) и делим на количество элементов
-        return CGSize(width: width, height: width) // возвращаем квадратный размер
+        // От ширины экрана отнимает все отступы (включая первый и последний) и делим на количество элементов
+        let width = (collectionView.bounds.width - sideInset * 5) / 4
+        // Возвращаем квадратный размер
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        sideInset // минимальный отступ между элементами UICollectionView
+        // Минимальный отступ между элементами UICollectionView
+        sideInset
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: sideInset, left: sideInset, bottom: sideInset, right: sideInset)
     }
-    
+
 }
 
 
 
 // MARK: - UICollectionViewDataSource
 
-extension FriendsTableViewCell: UICollectionViewDataSource {
+extension PhotosTableViewCell: UICollectionViewDataSource {
     
     
-    // MARK: - Private methods
+    // MARK: - Public methods
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: FrinedsCollectionViewCell.identifier, for: indexPath) as? FrinedsCollectionViewCell else {return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCollectionViewCell.identifier, for: indexPath) as? PhotosCollectionViewCell else {return UICollectionViewCell()}
         
-        if let image = collectionFriends[indexPath.row].image {
-            cell.setupCollectionFrinedsCell(image)
+        if let image = collectionPhotos[indexPath.row].image {
+            cell.setupCollectionCell(image)
         }
-        //      cell.setupCollectionCell(collectionPhotos[indexPath.item].image!)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        collectionFriends.count
+        collectionPhotos.count
     }
     
 }
+
+    
+    
+    
+    
 

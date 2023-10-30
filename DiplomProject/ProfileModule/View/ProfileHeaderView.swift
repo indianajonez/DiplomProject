@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileHeaderView: UIView {
     
+    //MARK: - Private properties
+    
     private lazy var avatarImage: UIImageView = {
         var image = UIImageView(image: UIImage(named: "Kate"))
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -53,7 +55,6 @@ class ProfileHeaderView: UIView {
         view.image = UIImage(named: "1cake.png")
         view.tintColor = .white
         view.contentMode = .scaleAspectFit
-        
         return view
     }()
     
@@ -72,7 +73,6 @@ class ProfileHeaderView: UIView {
         view.image = UIImage(named: "card.png")
         view.tintColor = .white
         view.contentMode = .scaleAspectFit
-        
         return view
     }()
     
@@ -85,21 +85,12 @@ class ProfileHeaderView: UIView {
         return view
     }()
     
-//    private lazy var userStackView: UIStackView = {
-//        let v = UIStackView(arrangedSubviews: [labelUserName, labelAboutUser, labelAge])
-//        v.translatesAutoresizingMaskIntoConstraints = false
-//        v.axis = .horizontal
-//        v.distribution = .equalSpacing
-//        v.spacing = 20
-//        return v
-//    }()
-    
     
     // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        [ fullNameLabel, labelUserName, labelAboutUser, labelAge, avatarImage, iconAge, iconAboutUser, iconEmail].forEach{addSubview($0)} //   userStackView,
+        [ fullNameLabel, labelUserName, labelAboutUser, labelAge, avatarImage, iconAge, iconAboutUser, iconEmail].forEach{addSubview($0)}
         setupConstraints()
     }
     
@@ -158,13 +149,9 @@ class ProfileHeaderView: UIView {
             
             fullNameLabel.topAnchor.constraint(equalTo: labelAge.bottomAnchor, constant: 15),
             fullNameLabel.leadingAnchor.constraint(equalTo: iconEmail.trailingAnchor, constant: 8),
-            
-//            userStackView.leadingAnchor.constraint(equalTo: avatarImage.leadingAnchor, constant: 32),
-//            userStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
-//            userStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 10)
 
         ])
-        
+
     }
 
 }

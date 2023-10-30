@@ -10,6 +10,8 @@ import UIKit
 
 final class SettingManager {
     
+    //MARK: - Public priperties
+    
     static let shared: SettingManager = SettingManager()
     
     var name: String?
@@ -18,6 +20,8 @@ final class SettingManager {
     var aboutUser: String?
     
     var isNeedUpdate: Bool = false
+    
+    //MARK: - Init
     
     private init() {}
     

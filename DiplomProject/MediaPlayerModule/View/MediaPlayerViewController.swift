@@ -9,6 +9,8 @@ import UIKit
 
 class MediaPlayerViewController: UIViewController {
     
+    //MARK: - Private properties
+    
     private let albums = Album.get()
     
     private lazy var tableView: UITableView = {
@@ -20,17 +22,21 @@ class MediaPlayerViewController: UIViewController {
         v.estimatedRowHeight = 132
         v.rowHeight = UITableView.automaticDimension
         v.tableFooterView = UIView()
-       
         return v
     }()
+    
+    //MARK: - Life cycls
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
+    //MARK: - Private methods
+    
     private func setupView() {
-        title = "My Music Player"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Моя музыка"
         view.addSubview(tableView)
         setupConstraints()
     }
@@ -47,6 +53,8 @@ class MediaPlayerViewController: UIViewController {
     
 }
 
+//MARK: - UITableViewDelegate, UITableViewDataSource
+
 extension MediaPlayerViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +67,6 @@ extension MediaPlayerViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         cell.album = albums[indexPath.row]
-//        cell.textLabel?.text = albums[indexPath.row].name
         return cell
     }
     

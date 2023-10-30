@@ -9,11 +9,13 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    //MARK: - Public properties
+    
     let profileVC: ProfileViewController?
-    //    let settingsVC = SettingsProfileViewController()
     let mediaVC = MediaPlayerViewController()
     let favorietsVC = FavorietsViewController()
     
+    //MARK: - Init
     
     init(profileVC: ProfileViewController?) {
         self.profileVC = profileVC
@@ -24,6 +26,8 @@ class TabBarController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
@@ -31,6 +35,8 @@ class TabBarController: UITabBarController {
         navigationItem.hidesBackButton = true
         setupControllers()
     }
+    
+    //MARK: - Public methods
     
     func setupControllers() {
         
@@ -48,11 +54,6 @@ class TabBarController: UITabBarController {
         let profileVC = UINavigationController(rootViewController: profile)
         let mediaVC = UINavigationController(rootViewController: mediaVC)
         let favoritesVC = UINavigationController(rootViewController: favorietsVC)
-            
-            //        profileVC.navigationController?.navigationBar.isHidden = true
-            
         viewControllers = [profileVC, mediaVC, favoritesVC]
-            
-            
         }
     }

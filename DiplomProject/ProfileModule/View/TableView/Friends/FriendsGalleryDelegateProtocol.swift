@@ -1,5 +1,5 @@
 //
-//  FriendsgalleryDelegateProtocol.swift
+//  FriendsGalleryDelegateProtocol.swift
 //  DiplomProject
 //
 //  Created by Ekaterina Saveleva on 29.10.2023.

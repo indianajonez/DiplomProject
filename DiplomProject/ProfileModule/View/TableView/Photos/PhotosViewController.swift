@@ -9,9 +9,9 @@ import UIKit
 
 class PhotosViewController: UIViewController {
     
-    private var imageList: [UIImage] = Photo.makeCollectioinPhotos()
+    //MARK: - Private properties
     
-//    lazy var allPhotos = Photo.makeCollectioinPhotos()
+    private var imageList: [UIImage] = Photo.makeCollectioinPhotos()
     
     private lazy var imageCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -25,7 +25,7 @@ class PhotosViewController: UIViewController {
         return imageCollection
     }()
     
-    
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,8 @@ class PhotosViewController: UIViewController {
         layout()
         
     }
+    
+    //MARK: - Private methods
     
     private func layout() {
         view.addSubview(imageCollection)
@@ -48,7 +50,9 @@ class PhotosViewController: UIViewController {
 
 }
 
+
 // MARK: - UICollectionViewDataSource
+
 extension PhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         imageList.count

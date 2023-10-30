@@ -10,6 +10,8 @@ import CoreData
 
 class FavorietsViewController: UIViewController {
     
+    //MARK: - Private properties
+    
     private var favoriteData: [NSManagedObject] = []
     
     private var coreDataManager = CoreDataManager.shared
@@ -22,10 +24,13 @@ class FavorietsViewController: UIViewController {
         table.register(FavorietsPostTableViewCell.self, forCellReuseIdentifier: String(describing: FavorietsPostTableViewCell.self))
         return table
     }()
+    
+    //MARK: - Life cycls
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
         title = "Избранное"
         setupView()
         setupConstraints()
@@ -38,6 +43,8 @@ class FavorietsViewController: UIViewController {
         
     }
     
+    //MARK: - Private methods
+    
     private func getFromCoreData() {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PostStorage")
         favoriteData = CoreDataManager.shared.fetchData(fetchRequest)
@@ -46,7 +53,6 @@ class FavorietsViewController: UIViewController {
             self.tablePosts.reloadData()
         }
     }
-    
     
     private func setupView() {
         view.addSubview(tablePosts)
@@ -65,7 +71,7 @@ class FavorietsViewController: UIViewController {
     }
 }
 
-
+//MARK: - UITableViewDelegate
 
 extension FavorietsViewController: UITableViewDelegate {
     
@@ -86,6 +92,8 @@ extension FavorietsViewController: UITableViewDelegate {
     
 }
 
+//MARK: - UITableViewDataSource
+
 extension FavorietsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,9 +105,4 @@ extension FavorietsViewController: UITableViewDataSource {
         cell.setup(post: favoriteData[indexPath.row])
         return cell
     }
-    
-    
-    
-    
-    
 }

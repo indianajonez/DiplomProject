@@ -9,6 +9,8 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
     
+    //MARK: - Private properties
+    
     private let checkerService = CheckerService()
     
     private lazy var scrollView: UIScrollView = {
@@ -94,7 +96,7 @@ class RegistrationViewController: UIViewController {
         return button
     }()
     
-    
+    //MARK: - Life cycls
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +104,8 @@ class RegistrationViewController: UIViewController {
         setupView()
         setupConstraints()
     }
+    
+    //MARK: - Private methods
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
@@ -124,11 +128,8 @@ class RegistrationViewController: UIViewController {
             registrationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             registrationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             registrationButton.heightAnchor.constraint(equalToConstant: 50)
-            
-            
         ])
     }
-    
     
     private func setupView() {
         

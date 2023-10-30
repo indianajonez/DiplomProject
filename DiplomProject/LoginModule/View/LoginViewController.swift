@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    //MARK: Private properties
+    //MARK: - Private properties
     
     private var checkerService: ChekerServiceProtocol?
         
@@ -56,7 +56,6 @@ class LoginViewController: UIViewController {
         password.isSecureTextEntry = true
         password.leftView = UIView(frame: CGRect(x: 0, y: 10, width: 10, height: 10))
         return password
-        
     }()
     
     private lazy var stackView: UIStackView = { [unowned self] in
@@ -73,7 +72,7 @@ class LoginViewController: UIViewController {
     private lazy var logInButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .darkGray //UIColor.createColor(lightMode: UIColor(rgb: 0x4885CC), darkMode: UIColor(rgb: 0x666666))
+        button.backgroundColor = .darkGray
         button.layer.cornerRadius = 10
         button.setTitle("Войти", for: .normal)
         button.addTarget(self, action: #selector(self.didTapLoginButton), for: .touchUpInside)
@@ -91,7 +90,7 @@ class LoginViewController: UIViewController {
         return button
     }()
     
-    //MARK: Live Cycls
+    //MARK: - Live Cycls
     
         init(checkerService: ChekerServiceProtocol) {
             super.init(nibName: nil, bundle: nil)
@@ -102,6 +101,8 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Public methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,7 +118,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    //MARK: Private methods
+    //MARK: - Private methods
     
     private func setupView() {
         
@@ -127,7 +128,6 @@ class LoginViewController: UIViewController {
         setupStackView()
         scrollView.addSubview(logInButton)
         scrollView.addSubview(registrationButton)
-        
     }
     
     private func setupStackView() {
@@ -183,11 +183,6 @@ class LoginViewController: UIViewController {
         ])
     }
     
-    //    @objc
-    //    private func kbdHide() {
-    //        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-    //    }
-    
     @objc
     private func didTapSuperView() {
         self.view.endEditing(true)
@@ -205,18 +200,13 @@ class LoginViewController: UIViewController {
             }
             let profileVC = ProfileViewController(user: user)
             self.navigationController?.pushViewController(TabBarController(profileVC: profileVC), animated: true)
-//            self.navigationController?.pushViewController(profileVC, animated: true)
-            // прописать переход через координатор в TabBarController
         }
-        
-        //тут будет Realm с сохранением данных User (логин и пароль)
     }
     
     @objc
     private func didTapRegistrationButton() {
         self.navigationController?.pushViewController(RegistrationViewController(), animated: true)
     }
-        
 }
 
 

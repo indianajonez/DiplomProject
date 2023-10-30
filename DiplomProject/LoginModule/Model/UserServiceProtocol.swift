@@ -5,7 +5,7 @@
 //  Created by Ekaterina Saveleva on 18.10.2023.
 //
 
-import UIKit
+import Foundation
 
 protocol UserServiceProtocol {
     func checkLogin(login: String) -> User?

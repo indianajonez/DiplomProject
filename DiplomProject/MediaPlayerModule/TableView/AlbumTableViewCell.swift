@@ -8,6 +8,8 @@
 import UIKit
 
 final class AlbumTableViewCell: UITableViewCell {
+    
+    //MARK: - Public properties
 
     var album: Album? {
         didSet {
@@ -18,6 +20,8 @@ final class AlbumTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    //MARK: - Private properties
     
     private lazy var albumCover: UIImageView = {
         let v = UIImageView()
@@ -49,6 +53,8 @@ final class AlbumTableViewCell: UITableViewCell {
         return v
     }()
     
+    //MARK: - Init
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -58,12 +64,16 @@ final class AlbumTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Public methods
+    
     func setupView() {
         [albumCover, albumName, songsCount].forEach { (v) in
             contentView.addSubview(v)
         }
         setupConstraints()
     }
+    
+    //MARK: - Private methods
     
     private func setupConstraints() {
         

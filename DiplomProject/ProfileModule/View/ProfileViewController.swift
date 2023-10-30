@@ -38,7 +38,7 @@ class ProfileViewController: UIViewController {
         return table
     }()
     
-    // MARK: - Lifecycles
+    // MARK: - Life cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,19 @@ class ProfileViewController: UIViewController {
         setupView()
         setupConstraints()
         makeBarButtonItems()
+        self.tabBarController?.tabBar.isHidden = false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if settingManager.isNeedUpdate {
+            header.updateInfo(user: self.user)
+            settingManager.isNeedUpdate = false
+           
+        }
+    }
+    
+    // MARK: - Init
     
     init(user: User?) {
         self.user = user
@@ -62,19 +73,12 @@ class ProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if settingManager.isNeedUpdate {
-            header.updateInfo(user: self.user)
-            settingManager.isNeedUpdate = false
-        }
-    }
+    //MARK: - private methods
     
     private func setupView() {
         view.addSubview(table)
     }
-    
-    
+
     private func setupConstraints() {
         
         NSLayoutConstraint.activate([
@@ -85,7 +89,8 @@ class ProfileViewController: UIViewController {
         ])
     }
     
-    @objc private func makeBarButtonItems() {
+    @objc
+    private func makeBarButtonItems() {
         let edit = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(editTapped))
         let logout = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .plain, target: self, action: #selector(logoutTapped))
         
@@ -104,9 +109,9 @@ class ProfileViewController: UIViewController {
     func logoutTapped() {
         let loginVC = LoginViewController(checkerService: CheckerService())
         navigationController?.pushViewController(loginVC, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
     }
 }
-
 
 
 
@@ -188,5 +193,4 @@ extension ProfileViewController: FriendsGalleryDelegateProtocol {
         let friendsVC = FriendsViewController()
         navigationController?.pushViewController(friendsVC, animated: true)
     }
-    
 }

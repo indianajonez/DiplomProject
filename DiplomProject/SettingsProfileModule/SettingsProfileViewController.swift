@@ -7,16 +7,13 @@
 
 import UIKit
 
-import UIKit
-
-//MARK: - надо прописать навигейшн контроллер и понять почему кнопка не появлятеся на скролл вью
-//MARK: - настроить метод сохраниения новых параметров func setUserInformation(user: UserSettings) для ПрофайлВью
-
 class SettingsProfileViewController: UIViewController {
     
     //MARK: - Private properties
     
     private let settingManager = SettingManager.shared
+    
+    private var user: User?
     
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
@@ -52,16 +49,6 @@ class SettingsProfileViewController: UIViewController {
         button.addTarget(self, action: #selector(openImagePicker), for: .touchUpInside)
         return button
     }()
-    
-    @objc
-    private func openImagePicker() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true)
-    }
-    
-    
     
     private lazy var titleUserName: UILabel = {
         let label = UILabel()
@@ -140,7 +127,6 @@ class SettingsProfileViewController: UIViewController {
         line.layer.borderWidth = 1
         line.layer.borderColor = UIColor.systemGray3.cgColor
         line.layer.backgroundColor = UIColor.systemGray3.cgColor
-        
         return line
     }()
     
@@ -155,8 +141,8 @@ class SettingsProfileViewController: UIViewController {
         
     }()
     
-    private var user: User?
-    //MARK: - Life cycles
+    
+    //MARK: - Init
     
     init(user: User?) {
         self.user = user
@@ -166,6 +152,8 @@ class SettingsProfileViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Life cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -186,11 +174,16 @@ class SettingsProfileViewController: UIViewController {
     }
     
     
-    //MARK: - Public methods
-    
-    
     
     //MARK: - Private methods
+    
+    @objc
+    private func openImagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true)
+    }
     
     private func setupInfo() {
         guard let user = self.user else {return}
@@ -235,7 +228,6 @@ class SettingsProfileViewController: UIViewController {
         scrollView.addSubview(textFieldAge)
         scrollView.addSubview(breakline3)
         scrollView.addSubview(saveSettingsButton)
-        
     }
     
     private func setupConstraints() {
@@ -304,14 +296,15 @@ class SettingsProfileViewController: UIViewController {
             saveSettingsButton.topAnchor.constraint(equalTo: breakline3.bottomAnchor, constant: 30),
             saveSettingsButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             saveSettingsButton.heightAnchor.constraint(equalToConstant: 50),
-            saveSettingsButton.widthAnchor.constraint(equalToConstant: 100),
+            saveSettingsButton.widthAnchor.constraint(equalToConstant: 300),
             saveSettingsButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -10)
             
         ])
     }
 }
 
-//
+
+//MARK: UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 extension SettingsProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

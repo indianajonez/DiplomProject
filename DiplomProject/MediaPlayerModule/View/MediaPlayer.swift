@@ -10,7 +10,11 @@ import AVKit
 
 final class MediaPlayer: UIView {
     
+    //MARK: - Public properties
+    
     var album: Album
+    
+    //MARK: - Private properties
     
     private lazy var albumName: UILabel = {
        let v = UILabel()
@@ -112,6 +116,8 @@ final class MediaPlayer: UIView {
     private var timer: Timer?
     private var playingIndex = 0
     
+    //MARK: - Life cycle
+    
     init(album: Album) {
         self.album = album
         super.init(frame: .zero)
@@ -121,6 +127,71 @@ final class MediaPlayer: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Public methods
+    
+    func play() {
+        progressBar.value = 0.0
+        progressBar.maximumValue = Float(player.duration)
+        player.play()
+        setPlayPauseIcon(isPlaying: player.isPlaying)
+    }
+    
+    func stop() {
+        player.stop()
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc
+    func updateProgress() {
+        progressBar.value = Float(player.currentTime)
+        
+        elapsedTimeLabel.text = getFormattedTimer(timeInterval: player.currentTime)
+        let remainigTime = player.duration - player.currentTime
+        remainingTimeLabel.text = getFormattedTimer(timeInterval: remainigTime)
+    }
+    
+    @objc
+    func progressScrubbed(_ sender: UISlider) {
+        player.currentTime = Float64(sender.value)
+    }
+    
+    @objc
+    func didTapPrevios(_ sender: UIButton) {
+        playingIndex -= 1
+        if playingIndex < 0 {
+            playingIndex = album.songs.count - 1
+        }
+        setupPlayer(song: album.songs[playingIndex])
+        play()
+        setPlayPauseIcon(isPlaying: player.isPlaying)
+    }
+    
+    @objc
+    func didTapPlayPause(_ sender: UIButton) {
+        if player.isPlaying {
+            player.pause()
+        } else {
+            player.play()
+        }
+        
+        setPlayPauseIcon(isPlaying: player.isPlaying)
+    }
+    
+    @objc
+    func didTapNext(_ sender: UIButton) {
+        playingIndex += 1
+        if playingIndex >= album.songs.count {
+            playingIndex = 0
+        }
+        setupPlayer(song: album.songs[playingIndex])
+        play()
+        setPlayPauseIcon(isPlaying: player.isPlaying)
+    }
+    
+    
+    //MARK: - Private methods
     
     private func setupView() {
         albumName.text = album.name
@@ -209,7 +280,6 @@ final class MediaPlayer: UIView {
             controlStack.topAnchor.constraint(equalTo: remainingTimeLabel.bottomAnchor, constant: 8)
 
         ])
-        
     }
     
     private func setupPlayer(song: Song) {
@@ -236,69 +306,9 @@ final class MediaPlayer: UIView {
         }
     }
     
-    func play() {
-        progressBar.value = 0.0
-        progressBar.maximumValue = Float(player.duration)
-        player.play()
-        setPlayPauseIcon(isPlaying: player.isPlaying)
-    }
-    
-    func stop() {
-        player.stop()
-        timer?.invalidate()
-        timer = nil
-    }
-    
     private func setPlayPauseIcon(isPlaying: Bool) {
         let config = UIImage.SymbolConfiguration(pointSize: 100)
         playPlauseButton.setImage(UIImage(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill", withConfiguration: config), for: .normal)
-    }
-    
-    @objc
-    func updateProgress() {
-        progressBar.value = Float(player.currentTime)
-        
-        elapsedTimeLabel.text = getFormattedTimer(timeInterval: player.currentTime)
-        let remainigTime = player.duration - player.currentTime
-        remainingTimeLabel.text = getFormattedTimer(timeInterval: remainigTime)
-    }
-    
-    @objc
-    func progressScrubbed(_ sender: UISlider) {
-        player.currentTime = Float64(sender.value)
-    }
-    
-    @objc
-    func didTapPrevios(_ sender: UIButton) {
-        playingIndex -= 1
-        if playingIndex < 0 {
-            playingIndex = album.songs.count - 1
-        }
-        setupPlayer(song: album.songs[playingIndex])
-        play()
-        setPlayPauseIcon(isPlaying: player.isPlaying)
-    }
-    
-    @objc
-    func didTapPlayPause(_ sender: UIButton) {
-        if player.isPlaying {
-            player.pause()
-        } else {
-            player.play()
-        }
-        
-        setPlayPauseIcon(isPlaying: player.isPlaying)
-    }
-    
-    @objc
-    func didTapNext(_ sender: UIButton) {
-        playingIndex += 1
-        if playingIndex >= album.songs.count {
-            playingIndex = 0
-        }
-        setupPlayer(song: album.songs[playingIndex])
-        play()
-        setPlayPauseIcon(isPlaying: player.isPlaying)
     }
     
     private func getFormattedTimer(timeInterval: TimeInterval) -> String {
@@ -317,6 +327,8 @@ final class MediaPlayer: UIView {
         
     }
 }
+
+//MARK: - AVAudioPlayerDelegate
 
 extension MediaPlayer: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {

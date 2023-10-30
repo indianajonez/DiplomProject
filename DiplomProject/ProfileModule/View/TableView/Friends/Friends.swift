@@ -13,7 +13,7 @@ struct Friends {
     
     let image: UIImage?
     
-    //MARK: - Publick methods
+    //MARK: - Public methods
     
     static func makeCollectionFriends() -> [Friends] {
         var collection: [Friends] = []

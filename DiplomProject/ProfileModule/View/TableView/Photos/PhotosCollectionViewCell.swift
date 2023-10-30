@@ -34,7 +34,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Public methods
     
-    func setupCollectionCell(_ photo: UIImage) { // не понимаю зачем эта функция
+    func setupCollectionCell(_ photo: UIImage) {
         imageCollectionCell.image = photo
     }
     

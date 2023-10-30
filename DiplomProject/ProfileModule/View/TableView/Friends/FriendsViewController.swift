@@ -8,6 +8,8 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
+    
+    // MARK: - Private properties
         
     private var imageList: [UIImage] = Friends.makeCollectionFriends()
         
@@ -25,7 +27,7 @@ class FriendsViewController: UIViewController {
             return imageCollection
         }()
         
-        
+    // MARK: - Life cycle
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -35,6 +37,8 @@ class FriendsViewController: UIViewController {
             
         }
         
+    // MARK: - Private methods
+    
         private func layout() {
             view.addSubview(imageCollection)
             
@@ -48,7 +52,10 @@ class FriendsViewController: UIViewController {
 
     }
 
+
+
     // MARK: - UICollectionViewDataSource
+
     extension FriendsViewController: UICollectionViewDataSource {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             imageList.count
@@ -62,6 +69,7 @@ class FriendsViewController: UIViewController {
     }
 
     // MARK: - UICollectionViewDelegateFlowLayout
+
     extension FriendsViewController: UICollectionViewDelegateFlowLayout {
         private var sideInset: CGFloat {return 8}
         

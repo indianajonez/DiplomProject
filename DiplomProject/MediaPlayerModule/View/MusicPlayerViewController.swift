@@ -9,13 +9,19 @@ import UIKit
 
 final class MusicPlayerViewController: UIViewController {
     
+    //MARK: - Public properties
+    
     var album: Album
+    
+    //MARK: - Private properties
     
     private lazy var mediaPlayer: MediaPlayer = {
         let v = MediaPlayer(album: album)
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
+    
+    //MARK: - Init
     
     init(album: Album) {
         self.album = album
@@ -25,11 +31,38 @@ final class MusicPlayerViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Life cycls
    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        mediaPlayer.play()
+        UIApplication.shared.isIdleTimerDisabled = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        mediaPlayer.stop()
+        UIApplication.shared.isIdleTimerDisabled = false
+    }
+    
+    //MARK: - Public methods
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            mediaPlayer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mediaPlayer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mediaPlayer.topAnchor.constraint(equalTo: view.topAnchor),
+            mediaPlayer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+    }
+    
+    //MARK: - Private methods
     
     private func setupView() {
         addBlurredView()
@@ -50,27 +83,5 @@ final class MusicPlayerViewController: UIViewController {
         } else {
             view.backgroundColor = UIColor.black
         }
-        
-    }
-
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            mediaPlayer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mediaPlayer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mediaPlayer.topAnchor.constraint(equalTo: view.topAnchor),
-            mediaPlayer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        mediaPlayer.play()
-        UIApplication.shared.isIdleTimerDisabled = true
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        mediaPlayer.stop()
-        UIApplication.shared.isIdleTimerDisabled = false
     }
 }

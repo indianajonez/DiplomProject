@@ -9,6 +9,8 @@ import UIKit
 
 class User {
     
+    //MARK: - Public properties
+    
     var login: String
     var name: String?
     var fullName: String?
@@ -16,6 +18,8 @@ class User {
     var age: String?
     var aboutUser: String?
     
+    
+    //MARK: - Life cycls
     
     init(login: String, fullName: String, avatar: UIImage = UIImage(), age: String = " ", aboutUser: String = " ", name: String = " ") {
         self.name = name
@@ -26,5 +30,4 @@ class User {
         self.age = age
  
     }
-    
 }

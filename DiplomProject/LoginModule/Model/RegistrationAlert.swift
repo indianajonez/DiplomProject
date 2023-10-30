@@ -8,8 +8,12 @@
 import UIKit
 
 class RegistrationAlert {
-    //синглтон?
+    
+    //MARK: - Public properties
+    
     static let defaultPicker = RegistrationAlert()
+    
+    //MARK: - Public methods
     
     func showSignupPicker(in viewController: UIViewController, completion: @escaping (String, String, String) -> () ) {
         let alert = UIAlertController(title: "Зарегистрироваться", message: nil, preferredStyle: .alert)
@@ -19,7 +23,7 @@ class RegistrationAlert {
         alert.addTextField()
         alert.addTextField()
         
-        // создаем кнопку "OK" в алерте
+        // Cоздаем кнопку "OK" в алерте
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             if let text1 = alert.textFields?[0].text,
                let text2 = alert.textFields?[1].text,
@@ -28,14 +32,13 @@ class RegistrationAlert {
                 completion(text1, text2, text3)
             }
         }
-        // создаем кнопку "Отмена" в алерте
+        // Cоздаем кнопку "Отмена" в алерте
         let canelAction = UIAlertAction(title: "Отмена", style: .default)
         
         alert.addAction(okAction)
         alert.addAction(canelAction)
         
-        // презентим алерт
+        // Презентим алерт
         viewController.present(alert, animated: true)
-        
     }
 }

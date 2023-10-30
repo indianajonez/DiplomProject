@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         //Auth.auth().logOut()
         CheckerService().logout()
-        print("LOG OUT")
+        
     }
 
 }

@@ -34,7 +34,7 @@ class FrinedsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Public methods
     
-    func setupCollectionFrinedsCell(_ photo: UIImage) { // не понимаю зачем эта функция
+    func setupCollectionFrinedsCell(_ photo: UIImage) {
         imageCollectionCell.image = photo
     }
     

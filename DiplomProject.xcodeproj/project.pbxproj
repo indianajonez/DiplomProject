@@ -19,7 +19,7 @@
 		F39A96812AEE4D8E000F5F40 /* SettiingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96802AEE4D8E000F5F40 /* SettiingManager.swift */; };
 		F39A96832AEE793F000F5F40 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96822AEE793F000F5F40 /* FriendsViewController.swift */; };
 		F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96842AEE7B73000F5F40 /* Friends.swift */; };
-		F39A96872AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */; };
+		F39A96872AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96862AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift */; };
 		F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */; };
 		F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */; };
 		F39A968D2AEECB12000F5F40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */; };
@@ -75,7 +75,7 @@
 		F39A96802AEE4D8E000F5F40 /* SettiingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettiingManager.swift; sourceTree = "<group>"; };
 		F39A96822AEE793F000F5F40 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		F39A96842AEE7B73000F5F40 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
-		F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsgalleryDelegateProtocol.swift; sourceTree = "<group>"; };
+		F39A96862AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGalleryDelegateProtocol.swift; sourceTree = "<group>"; };
 		F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavorietsPostTableViewCell.swift; path = ../../../../../../Desktop/FavorietsModule/FavorietsPostTableViewCell.swift; sourceTree = "<group>"; };
 		F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = ../../../../../../Desktop/FavorietsModule/CoreDataManager.swift; sourceTree = "<group>"; };
@@ -134,12 +134,9 @@
 		F34B271E2AE946230088F5C8 /* MediaPlayerModule */ = {
 			isa = PBXGroup;
 			children = (
-				F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */,
-				F34B27372AE9580D0088F5C8 /* Song.swift */,
-				F34B27392AE958650088F5C8 /* Album.swift */,
-				F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */,
-				F34B273D2AE987E30088F5C8 /* MediaPlayer.swift */,
-				F34B273F2AEA6FC50088F5C8 /* MusicPlayerViewController.swift */,
+				F39A96E22AF0035A000F5F40 /* TableView */,
+				F39A96E12AF002B3000F5F40 /* View */,
+				F39A96E02AF0029A000F5F40 /* Model */,
 			);
 			path = MediaPlayerModule;
 			sourceTree = "<group>";
@@ -183,11 +180,69 @@
 			path = acoustic;
 			sourceTree = "<group>";
 		};
+		F39A96DD2AEFF797000F5F40 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F3E9B7982AE27D6000FAA97A /* Photos.swift */,
+				F3E9B7902AE26E8D00FAA97A /* PhotosTableViewCell.swift */,
+				F3E9B79A2AE2847F00FAA97A /* PhotosCollectionViewCell.swift */,
+				F3E9B79E2AE288C800FAA97A /* PhotosViewController.swift */,
+				F3E9B7922AE26F4400FAA97A /* PhotosGalleryDelegateProtocol.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		F39A96DE2AEFF7B4000F5F40 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				F39A96842AEE7B73000F5F40 /* Friends.swift */,
+				F39A96822AEE793F000F5F40 /* FriendsViewController.swift */,
+				F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */,
+				F39A96862AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift */,
+				F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		F39A96DF2AEFF83B000F5F40 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				F3E9B7942AE26FAE00FAA97A /* PostTableViewCell.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		F39A96E02AF0029A000F5F40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F34B27392AE958650088F5C8 /* Album.swift */,
+				F34B27372AE9580D0088F5C8 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F39A96E12AF002B3000F5F40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34B273D2AE987E30088F5C8 /* MediaPlayer.swift */,
+				F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */,
+				F34B273F2AEA6FC50088F5C8 /* MusicPlayerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F39A96E22AF0035A000F5F40 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		F3A1A8B92AE008080055BD2D = {
 			isa = PBXGroup;
 			children = (
 				F3A1A8C42AE008080055BD2D /* DiplomProject */,
-				F3A1A9002AE016A20055BD2D /* Extention */,
 				F3A1A8C32AE008080055BD2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -203,17 +258,18 @@
 		F3A1A8C42AE008080055BD2D /* DiplomProject */ = {
 			isa = PBXGroup;
 			children = (
-				F39A96CA2AEEE0D9000F5F40 /* acoustic */,
-				F39A96C92AEEE0D6000F5F40 /* jazz */,
-				F39A96C82AEEE0D3000F5F40 /* cinematic */,
+				F3A1A9002AE016A20055BD2D /* Extention */,
+				F3A1A8D32AE008090055BD2D /* Info.plist */,
 				F34B27212AE9485C0088F5C8 /* FavorietsModule */,
 				F34B271E2AE946230088F5C8 /* MediaPlayerModule */,
-				F3A1A8D32AE008090055BD2D /* Info.plist */,
 				F3A1A8E32AE012D10055BD2D /* LoginModule */,
 				F3A1A8FA2AE015EB0055BD2D /* ProfileModule */,
 				F3E9B7A02AE6B4D100FAA97A /* SettingsProfileModule */,
 				F3A1A8E22AE0129E0055BD2D /* AppSettings */,
 				F34B271A2AE8704E0088F5C8 /* TabBarController.swift */,
+				F39A96CA2AEEE0D9000F5F40 /* acoustic */,
+				F39A96C92AEEE0D6000F5F40 /* jazz */,
+				F39A96C82AEEE0D3000F5F40 /* cinematic */,
 			);
 			path = DiplomProject;
 			sourceTree = "<group>";
@@ -234,25 +290,16 @@
 			children = (
 				F3A1A8E62AE013020055BD2D /* Model */,
 				F3A1A8E52AE012FC0055BD2D /* View */,
-				F3A1A8E42AE012FA0055BD2D /* ViewModel */,
 			);
 			path = LoginModule;
-			sourceTree = "<group>";
-		};
-		F3A1A8E42AE012FA0055BD2D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */,
-				F3A1A8F62AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift */,
-				F3A1A8F82AE015B60055BD2D /* LoginViewControllerDelegateError.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F3A1A8E52AE012FC0055BD2D /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F3A1A8C92AE008080055BD2D /* LoginViewController.swift */,
+				F3A1A8F82AE015B60055BD2D /* LoginViewControllerDelegateError.swift */,
+				F3A1A8F62AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift */,
 				F3A1A9032AE025900055BD2D /* RegistrationViewController.swift */,
 			);
 			path = View;
@@ -261,9 +308,10 @@
 		F3A1A8E62AE013020055BD2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F3A1A8E72AE0133F0055BD2D /* FirebaseAuth */,
-				F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */,
 				F3A1A8EE2AE0146C0055BD2D /* User.swift */,
+				F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */,
+				F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */,
+				F3A1A8E72AE0133F0055BD2D /* FirebaseAuth */,
 				F3A1A8F02AE0149A0055BD2D /* CurrentUserService.swift */,
 			);
 			path = Model;
@@ -283,26 +331,16 @@
 			children = (
 				F3A1A8FD2AE016180055BD2D /* Model */,
 				F3A1A8FC2AE016150055BD2D /* View */,
-				F3A1A8FB2AE016110055BD2D /* ViewModel */,
 			);
 			path = ProfileModule;
-			sourceTree = "<group>";
-		};
-		F3A1A8FB2AE016110055BD2D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F3A1A8FC2AE016150055BD2D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3E9B78F2AE26E5900FAA97A /* TableViewStyle */,
 				F3A1A8FE2AE0166C0055BD2D /* ProfileViewController.swift */,
 				F3E9B78D2AE1971D00FAA97A /* ProfileHeaderView.swift */,
-				F3E9B7982AE27D6000FAA97A /* Photos.swift */,
-				F39A96842AEE7B73000F5F40 /* Friends.swift */,
+				F3E9B78F2AE26E5900FAA97A /* TableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,20 +362,14 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
-		F3E9B78F2AE26E5900FAA97A /* TableViewStyle */ = {
+		F3E9B78F2AE26E5900FAA97A /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				F3E9B7902AE26E8D00FAA97A /* PhotosTableViewCell.swift */,
-				F3E9B7922AE26F4400FAA97A /* PhotosGalleryDelegateProtocol.swift */,
-				F3E9B7942AE26FAE00FAA97A /* PostTableViewCell.swift */,
-				F3E9B79A2AE2847F00FAA97A /* PhotosCollectionViewCell.swift */,
-				F3E9B79E2AE288C800FAA97A /* PhotosViewController.swift */,
-				F39A96822AEE793F000F5F40 /* FriendsViewController.swift */,
-				F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */,
-				F39A96862AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift */,
-				F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */,
+				F39A96DF2AEFF83B000F5F40 /* Post */,
+				F39A96DE2AEFF7B4000F5F40 /* Friends */,
+				F39A96DD2AEFF797000F5F40 /* Photos */,
 			);
-			path = TableViewStyle;
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		F3E9B7A02AE6B4D100FAA97A /* SettingsProfileModule */ = {
@@ -438,7 +470,7 @@
 				F3E9B7972AE2783100FAA97A /* Post2.swift in Sources */,
 				F3E9B79F2AE288C800FAA97A /* PhotosViewController.swift in Sources */,
 				F3E9B79B2AE2847F00FAA97A /* PhotosCollectionViewCell.swift in Sources */,
-				F39A96872AEE7C12000F5F40 /* FriendsgalleryDelegateProtocol.swift in Sources */,
+				F39A96872AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift in Sources */,
 				F3E9B79D2AE2879000FAA97A /* ExtentionUIView.swift in Sources */,
 				F39A96832AEE793F000F5F40 /* FriendsViewController.swift in Sources */,
 				F3E9B7912AE26E8D00FAA97A /* PhotosTableViewCell.swift in Sources */,

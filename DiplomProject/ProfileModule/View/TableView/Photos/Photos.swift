@@ -18,8 +18,7 @@ struct Photo {
     
     let image: UIImage?
     
-    //MARK: - Publick methods
-    
+    //MARK: - Public methods
     
     static func makeCollectionPhotos(type: TypePhoto) -> [Photo] {
         var collection: [Photo] = []
@@ -38,7 +37,6 @@ struct Photo {
         return collection
     }
 
-    
     static func makeCollectioinPhotos() -> [UIImage] {
         var collection: [UIImage] = []
         for image in 0...13 {

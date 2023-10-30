@@ -8,6 +8,8 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
+    
+    //MARK: - Private properties
 
     private var post: Post!
     
@@ -69,7 +71,6 @@ class PostTableViewCell: UITableViewCell {
         button.tintColor = .systemRed
         button.setImage(UIImage(systemName: "heart"), for: .normal)
         button.addTarget(self, action: #selector(addLikes), for: .touchUpInside)
-        
         return button
     }()
     
@@ -78,8 +79,6 @@ class PostTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupConstrains()
-//        setupGestures()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -96,6 +95,8 @@ class PostTableViewCell: UITableViewCell {
         postViewsCount.text = String(post.views)
         self.post = post
     }
+    
+    // MARK: - Private methods
     
     private func setupConstrains() {
         [postNameLabel, postImage, postDescLabel, postLikes, postLikesCount, postViews, postViewsCount, tapLikeButton].forEach({contentView.addSubview($0)})
@@ -141,8 +142,6 @@ class PostTableViewCell: UITableViewCell {
             tapLikeButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -labelInset)
         ])
     }
-    
-  
     
     @objc
     private func addLikes() {
