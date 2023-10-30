@@ -20,7 +20,6 @@ final class CheckerService: ChekerServiceProtocol {
     //MARK: - Public methods
     
     // Зайти в систему с уже зарегистрированными логином и паролем
-    
     func logIn(email: String, pass: String, completion: @escaping (User?, String?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: pass) { authResult , error in
             if let error {

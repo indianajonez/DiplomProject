@@ -7,8 +7,6 @@
 
 import UIKit
 
-//MARK: - настроить отображение коллекции с первой фотографии, починить отображение галереи
-
 class ProfileViewController: UIViewController {
     
     
