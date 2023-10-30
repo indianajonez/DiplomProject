@@ -12,16 +12,26 @@
 - Организовано хранение данных (логин, пароль) в Firebase
 - Организовано хранение данных (посты юзеров) в CoreData
 
+### Вход в приложение 
 ![LoginView](https://github.com/indianajonez/DiplomProject/blob/main/1.png)
-
+### Регистрация
 ![RegistrationView](https://github.com/indianajonez/DiplomProject/blob/main/2.png)
+### Данные
 ![LoginView](https://github.com/indianajonez/DiplomProject/blob/main/3.png)
+### Данные пользователя пустые
 ![EmptyHeaderProfileView](https://github.com/indianajonez/DiplomProject/blob/main/4.png)
+### Переходим в настройки
 ![EmptySettings](https://github.com/indianajonez/DiplomProject/blob/main/5.png)
+### Заполняем данные о пользователе 
 ![FieledSettings](https://github.com/indianajonez/DiplomProject/blob/main/6.png)
 ![SavedSettings](https://github.com/indianajonez/DiplomProject/blob/main/7.png)
+### Данные пользователя появились в шапке профиля
 ![FieldHeaderProfileView](https://github.com/indianajonez/DiplomProject/blob/main/8.png)
+### Сохранение поста
 ![SavedPost](https://github.com/indianajonez/DiplomProject/blob/main/9.png)
+### Добавление поста в "Избранное"
 ![Favorites](https://github.com/indianajonez/DiplomProject/blob/main/10.png)
+### Плей лист с несколькими музыкальными альбомами
 ![MusicPlayer](https://github.com/indianajonez/DiplomProject/blob/main/11.png)
+### Окно плеера
 ![TrackPlaing](https://github.com/indianajonez/DiplomProject/blob/main/12.png)
