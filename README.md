@@ -12,3 +12,4 @@
 Организовано хранение данных (логин, пароль) в Firebase
 Организовано хранение данных (посты юзеров) в CoreData
 
+![LoginView](http://github.com/indianajonez/DiplomProject/blob/main/1.png)
