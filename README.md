@@ -14,25 +14,47 @@
 - Организовано хранение данных (посты юзеров) в CoreData
 
 ### Вход в приложение 
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/1.png" width="200"/>
+
 ### Регистрация
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/2.png" width="200"/>
+
 ### Данные
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/3.png" width="200"/>
+
 ### Данные пользователя в хедере пустые
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/4.png" width="200"/>
+
 ### Переходим в настройки
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/5.png" width="200"/>
+
 ### Заполняем данные о пользователе 
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/6.png" width="200"/>
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/7.png" width="200"/>
+
 ### Данные пользователя появились в шапке профиля
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/8.png" width="200"/>
+
 ### Сохранение поста
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/9.png" width="200"/>
+
 ### Добавление поста в "Избранное"
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/10.png" width="200"/>
+
 ### Плей лист с несколькими музыкальными альбомами
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/11.png" width="200"/>
+
 ### Окно плеера
+
 <img src="https://github.com/indianajonez/DiplomProject/blob/main/12.png" width="200"/>
