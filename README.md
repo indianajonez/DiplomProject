@@ -14,7 +14,8 @@
 - Организовано хранение данных (посты юзеров) в CoreData
 
 ### Вход в приложение 
-![LoginView]("https://github.com/indianajonez/DiplomProject/blob/main/1.png" width="200")
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/1.png" width="100"/>
+![LoginView]("https://github.com/indianajonez/DiplomProject/blob/main/1.png")
 ### Регистрация
 ![RegistrationView](https://github.com/indianajonez/DiplomProject/blob/main/2.png)
 ### Данные
