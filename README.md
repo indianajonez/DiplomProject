@@ -14,26 +14,25 @@
 - Организовано хранение данных (посты юзеров) в CoreData
 
 ### Вход в приложение 
-<img src="https://github.com/indianajonez/DiplomProject/blob/main/1.png" width="100"/>
-![LoginView]("https://github.com/indianajonez/DiplomProject/blob/main/1.png")
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/1.png" width="200"/>
 ### Регистрация
-![RegistrationView](https://github.com/indianajonez/DiplomProject/blob/main/2.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/2.png" width="200"/>
 ### Данные
-![LoginView](https://github.com/indianajonez/DiplomProject/blob/main/3.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/3.png" width="200"/>
 ### Данные пользователя в хедере пустые
-![EmptyHeaderProfileView](https://github.com/indianajonez/DiplomProject/blob/main/4.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/4.png" width="200"/>
 ### Переходим в настройки
-![EmptySettings](https://github.com/indianajonez/DiplomProject/blob/main/5.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/5.png" width="200"/>
 ### Заполняем данные о пользователе 
-![FieledSettings](https://github.com/indianajonez/DiplomProject/blob/main/6.png)
-![SavedSettings](https://github.com/indianajonez/DiplomProject/blob/main/7.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/6.png" width="200"/>
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/7.png" width="200"/>
 ### Данные пользователя появились в шапке профиля
-![FieldHeaderProfileView](https://github.com/indianajonez/DiplomProject/blob/main/8.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/8.png" width="200"/>
 ### Сохранение поста
-![SavedPost](https://github.com/indianajonez/DiplomProject/blob/main/9.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/9.png" width="200"/>
 ### Добавление поста в "Избранное"
-![Favorites](https://github.com/indianajonez/DiplomProject/blob/main/10.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/10.png" width="200"/>
 ### Плей лист с несколькими музыкальными альбомами
-![MusicPlayer](https://github.com/indianajonez/DiplomProject/blob/main/11.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/11.png" width="200"/>
 ### Окно плеера
-![TrackPlaing](https://github.com/indianajonez/DiplomProject/blob/main/12.png)
+<img src="https://github.com/indianajonez/DiplomProject/blob/main/12.png" width="200"/>
