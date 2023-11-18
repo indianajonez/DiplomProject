@@ -10,7 +10,7 @@
 		F34B271B2AE8704E0088F5C8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271A2AE8704E0088F5C8 /* TabBarController.swift */; };
 		F34B271D2AE879AB0088F5C8 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */; };
 		F34B27202AE946670088F5C8 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */; };
-		F34B27232AE948810088F5C8 /* FavorietsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27222AE948810088F5C8 /* FavorietsViewController.swift */; };
+		F34B27232AE948810088F5C8 /* FavorietsViewController_TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27222AE948810088F5C8 /* FavorietsViewController_TEST.swift */; };
 		F34B27382AE9580D0088F5C8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27372AE9580D0088F5C8 /* Song.swift */; };
 		F34B273A2AE958650088F5C8 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B27392AE958650088F5C8 /* Album.swift */; };
 		F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */; };
@@ -21,9 +21,9 @@
 		F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96842AEE7B73000F5F40 /* Friends.swift */; };
 		F39A96872AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96862AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift */; };
 		F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */; };
-		F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */; };
-		F39A968D2AEECB12000F5F40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */; };
-		F39A96902AEECC29000F5F40 /* PostStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F39A968E2AEECC29000F5F40 /* PostStorage.xcdatamodeld */; };
+		F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell_TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell_TEST.swift */; };
+		F39A968D2AEECB12000F5F40 /* CoreDataManager_TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A968B2AEECB12000F5F40 /* CoreDataManager_TEST.swift */; };
+		F39A96902AEECC29000F5F40 /* PostStorage_TEST.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F39A968E2AEECC29000F5F40 /* PostStorage_TEST.xcdatamodeld */; };
 		F39A969A2AEED9BF000F5F40 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F39A96992AEED9BF000F5F40 /* FirebaseAuth */; };
 		F39A969C2AEED9BF000F5F40 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F39A969B2AEED9BF000F5F40 /* FirebaseFirestore */; };
 		F39A969E2AEED9BF000F5F40 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F39A969D2AEED9BF000F5F40 /* FirebaseFirestoreSwift */; };
@@ -66,7 +66,7 @@
 		F34B271A2AE8704E0088F5C8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F34B271C2AE879AB0088F5C8 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		F34B271F2AE946670088F5C8 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
-		F34B27222AE948810088F5C8 /* FavorietsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorietsViewController.swift; sourceTree = "<group>"; };
+		F34B27222AE948810088F5C8 /* FavorietsViewController_TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorietsViewController_TEST.swift; sourceTree = "<group>"; };
 		F34B27372AE9580D0088F5C8 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		F34B27392AE958650088F5C8 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		F34B273B2AE964250088F5C8 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 		F39A96842AEE7B73000F5F40 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		F39A96862AEE7C12000F5F40 /* FriendsGalleryDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGalleryDelegateProtocol.swift; sourceTree = "<group>"; };
 		F39A96882AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
-		F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavorietsPostTableViewCell.swift; path = ../../../../../../Desktop/FavorietsModule/FavorietsPostTableViewCell.swift; sourceTree = "<group>"; };
-		F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = ../../../../../../Desktop/FavorietsModule/CoreDataManager.swift; sourceTree = "<group>"; };
+		F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell_TEST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavorietsPostTableViewCell_TEST.swift; path = ../../../../../../Desktop/FavorietsModule/FavorietsPostTableViewCell_TEST.swift; sourceTree = "<group>"; };
+		F39A968B2AEECB12000F5F40 /* CoreDataManager_TEST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager_TEST.swift; path = ../../../../../../Desktop/FavorietsModule/CoreDataManager_TEST.swift; sourceTree = "<group>"; };
 		F39A968F2AEECC29000F5F40 /* PostStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostStorage.xcdatamodel; sourceTree = "<group>"; };
 		F39A96CF2AEEE10F000F5F40 /* bensound-itmighttakeawhile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-itmighttakeawhile.mp3"; path = "../../../../../../Downloads/bensound-itmighttakeawhile.mp3"; sourceTree = "<group>"; };
 		F39A96D12AEEE116000F5F40 /* bensound-pleasewatchmyback.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-pleasewatchmyback.mp3"; path = "../../../../../../Downloads/bensound-pleasewatchmyback.mp3"; sourceTree = "<group>"; };
@@ -144,40 +144,40 @@
 		F34B27212AE9485C0088F5C8 /* FavorietsModule */ = {
 			isa = PBXGroup;
 			children = (
-				F39A968E2AEECC29000F5F40 /* PostStorage.xcdatamodeld */,
-				F39A968B2AEECB12000F5F40 /* CoreDataManager.swift */,
-				F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift */,
-				F34B27222AE948810088F5C8 /* FavorietsViewController.swift */,
+				F39A968E2AEECC29000F5F40 /* PostStorage_TEST.xcdatamodeld */,
+				F39A968B2AEECB12000F5F40 /* CoreDataManager_TEST.swift */,
+				F39A968A2AEECB12000F5F40 /* FavorietsPostTableViewCell_TEST.swift */,
+				F34B27222AE948810088F5C8 /* FavorietsViewController_TEST.swift */,
 			);
 			path = FavorietsModule;
 			sourceTree = "<group>";
 		};
-		F39A96C82AEEE0D3000F5F40 /* cinematic */ = {
+		F39A96C82AEEE0D3000F5F40 /* cinematic_TEST */ = {
 			isa = PBXGroup;
 			children = (
 				F39A96DB2AEEE171000F5F40 /* bensound-jambomambo.mp3 */,
 				F39A96D72AEEE154000F5F40 /* bensound-elevation.mp3 */,
 				F39A96D92AEEE161000F5F40 /* bensound-everyminuteisaneternity.mp3 */,
 			);
-			path = cinematic;
+			path = cinematic_TEST;
 			sourceTree = "<group>";
 		};
-		F39A96C92AEEE0D6000F5F40 /* jazz */ = {
+		F39A96C92AEEE0D6000F5F40 /* jazz_TEST */ = {
 			isa = PBXGroup;
 			children = (
 				F39A96D32AEEE12F000F5F40 /* bensound-growingold.mp3 */,
 				F39A96D52AEEE13A000F5F40 /* bensound-jumpingbean.mp3 */,
 			);
-			path = jazz;
+			path = jazz_TEST;
 			sourceTree = "<group>";
 		};
-		F39A96CA2AEEE0D9000F5F40 /* acoustic */ = {
+		F39A96CA2AEEE0D9000F5F40 /* acoustic_TEST */ = {
 			isa = PBXGroup;
 			children = (
 				F39A96D12AEEE116000F5F40 /* bensound-pleasewatchmyback.mp3 */,
 				F39A96CF2AEEE10F000F5F40 /* bensound-itmighttakeawhile.mp3 */,
 			);
-			path = acoustic;
+			path = acoustic_TEST;
 			sourceTree = "<group>";
 		};
 		F39A96DD2AEFF797000F5F40 /* Photos */ = {
@@ -267,9 +267,9 @@
 				F3E9B7A02AE6B4D100FAA97A /* SettingsProfileModule */,
 				F3A1A8E22AE0129E0055BD2D /* AppSettings */,
 				F34B271A2AE8704E0088F5C8 /* TabBarController.swift */,
-				F39A96CA2AEEE0D9000F5F40 /* acoustic */,
-				F39A96C92AEEE0D6000F5F40 /* jazz */,
-				F39A96C82AEEE0D3000F5F40 /* cinematic */,
+				F39A96CA2AEEE0D9000F5F40 /* acoustic_TEST */,
+				F39A96C92AEEE0D6000F5F40 /* jazz_TEST */,
+				F39A96C82AEEE0D3000F5F40 /* cinematic_TEST */,
 			);
 			path = DiplomProject;
 			sourceTree = "<group>";
@@ -479,14 +479,14 @@
 				F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */,
 				F34B27382AE9580D0088F5C8 /* Song.swift in Sources */,
 				F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */,
-				F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell.swift in Sources */,
+				F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell_TEST.swift in Sources */,
 				F3E9B7992AE27D6000FAA97A /* Photos.swift in Sources */,
 				F34B271B2AE8704E0088F5C8 /* TabBarController.swift in Sources */,
 				F34B27202AE946670088F5C8 /* MediaPlayerViewController.swift in Sources */,
 				F3A1A8CA2AE008080055BD2D /* LoginViewController.swift in Sources */,
 				F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */,
 				F3A1A9042AE025900055BD2D /* RegistrationViewController.swift in Sources */,
-				F39A96902AEECC29000F5F40 /* PostStorage.xcdatamodeld in Sources */,
+				F39A96902AEECC29000F5F40 /* PostStorage_TEST.xcdatamodeld in Sources */,
 				F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */,
 				F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */,
 				F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */,
@@ -501,9 +501,9 @@
 				F34B273E2AE987E30088F5C8 /* MediaPlayer.swift in Sources */,
 				F3A1A8F72AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift in Sources */,
 				F3E9B78E2AE1971D00FAA97A /* ProfileHeaderView.swift in Sources */,
-				F39A968D2AEECB12000F5F40 /* CoreDataManager.swift in Sources */,
+				F39A968D2AEECB12000F5F40 /* CoreDataManager_TEST.swift in Sources */,
 				F3A1A8C82AE008080055BD2D /* SceneDelegate.swift in Sources */,
-				F34B27232AE948810088F5C8 /* FavorietsViewController.swift in Sources */,
+				F34B27232AE948810088F5C8 /* FavorietsViewController_TEST.swift in Sources */,
 				F3A1A8F92AE015B60055BD2D /* LoginViewControllerDelegateError.swift in Sources */,
 				F34B27402AEA6FC50088F5C8 /* MusicPlayerViewController.swift in Sources */,
 				F34B273A2AE958650088F5C8 /* Album.swift in Sources */,
@@ -745,14 +745,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		F39A968E2AEECC29000F5F40 /* PostStorage.xcdatamodeld */ = {
+		F39A968E2AEECC29000F5F40 /* PostStorage_TEST.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				F39A968F2AEECC29000F5F40 /* PostStorage.xcdatamodel */,
 			);
 			currentVersion = F39A968F2AEECC29000F5F40 /* PostStorage.xcdatamodel */;
-			name = PostStorage.xcdatamodeld;
-			path = ../../../../../../Desktop/FavorietsModule/PostStorage.xcdatamodeld;
+			name = PostStorage_TEST.xcdatamodeld;
+			path = ../../../../../../Desktop/FavorietsModule/PostStorage_TEST.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
