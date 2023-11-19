@@ -160,6 +160,8 @@ class RegistrationViewController: UIViewController {
         self.present(alertController, animated: true)
     }
     
+    //TODO: А если я введ пробелы? " " - это разве валидно?)
+    
     @objc private func tapRegister() {
         
         let login = loginTextField.text ?? ""
@@ -178,6 +180,9 @@ class RegistrationViewController: UIViewController {
                     if check {
                         self.checkerService.logIn(email: login, pass: pass) { user, error in
                             let profileVC = ProfileViewController(user: user)
+                            
+                            //TODO: То есть я могу вернуться на экран регистрации и логина?) Это как? Вы должны подменять рутовый контроллер окна у сцен делегата. Для этого надо добраться до сцен делегата, взять его окно и подменить rootViewController
+
                             self.navigationController?.pushViewController(profileVC, animated: true)
                         }
                     }

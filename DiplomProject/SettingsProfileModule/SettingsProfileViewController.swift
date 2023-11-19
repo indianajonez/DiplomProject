@@ -67,7 +67,7 @@ class SettingsProfileViewController: UIViewController {
         return textField
     }()
     
-    private lazy var breakline: UIView = {
+    private lazy var breaklineView: UIView = {
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
         line.layer.borderWidth = 1
@@ -94,7 +94,7 @@ class SettingsProfileViewController: UIViewController {
         return textField
     }()
     
-    private lazy var breakline2: UIView = {
+    private lazy var breakline2View: UIView = {
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
         line.layer.borderWidth = 1
@@ -121,7 +121,7 @@ class SettingsProfileViewController: UIViewController {
         return textField
     }()
     
-    private lazy var breakline3: UIView = {
+    private lazy var breakline3View: UIView = {
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
         line.layer.borderWidth = 1
@@ -219,14 +219,14 @@ class SettingsProfileViewController: UIViewController {
         scrollView.addSubview(addPhotoImageView)
         scrollView.addSubview(titleUserName)
         scrollView.addSubview(textFieldName)
-        scrollView.addSubview(breakline)
+        scrollView.addSubview(breaklineView)
         scrollView.addSubview(plusView)
         scrollView.addSubview(titleInformationAboutUser)
         scrollView.addSubview(textFieldAboutUser)
-        scrollView.addSubview(breakline2)
+        scrollView.addSubview(breakline2View)
         scrollView.addSubview(titleAboutUserAge)
         scrollView.addSubview(textFieldAge)
-        scrollView.addSubview(breakline3)
+        scrollView.addSubview(breakline3View)
         scrollView.addSubview(saveSettingsButton)
     }
     
@@ -260,12 +260,12 @@ class SettingsProfileViewController: UIViewController {
             textFieldName.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             textFieldName.heightAnchor.constraint(equalToConstant: 30),
             
-            breakline.topAnchor.constraint(equalTo: textFieldName.bottomAnchor, constant: 2),
-            breakline.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
-            breakline.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-            breakline.heightAnchor.constraint(equalToConstant: 2),
+            breaklineView.topAnchor.constraint(equalTo: textFieldName.bottomAnchor, constant: 2),
+            breaklineView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            breaklineView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            breaklineView.heightAnchor.constraint(equalToConstant: 2),
             
-            titleInformationAboutUser.topAnchor.constraint(equalTo: breakline.bottomAnchor, constant: 30),
+            titleInformationAboutUser.topAnchor.constraint(equalTo: breaklineView.bottomAnchor, constant: 30),
             titleInformationAboutUser.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
             titleInformationAboutUser.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             
@@ -274,12 +274,12 @@ class SettingsProfileViewController: UIViewController {
             textFieldAboutUser.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             textFieldAboutUser.heightAnchor.constraint(equalToConstant: 30),
             
-            breakline2.topAnchor.constraint(equalTo: textFieldAboutUser.bottomAnchor, constant: 2),
-            breakline2.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
-            breakline2.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-            breakline2.heightAnchor.constraint(equalToConstant: 2),
+            breakline2View.topAnchor.constraint(equalTo: textFieldAboutUser.bottomAnchor, constant: 2),
+            breakline2View.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            breakline2View.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            breakline2View.heightAnchor.constraint(equalToConstant: 2),
             
-            titleAboutUserAge.topAnchor.constraint(equalTo: breakline2.bottomAnchor, constant: 50),
+            titleAboutUserAge.topAnchor.constraint(equalTo: breakline2View.bottomAnchor, constant: 50),
             titleAboutUserAge.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
             titleAboutUserAge.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             
@@ -288,12 +288,12 @@ class SettingsProfileViewController: UIViewController {
             textFieldAge.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             textFieldAge.heightAnchor.constraint(equalToConstant: 30),
             
-            breakline3.topAnchor.constraint(equalTo: textFieldAge.bottomAnchor, constant: 2),
-            breakline3.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
-            breakline3.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -240),
-            breakline3.heightAnchor.constraint(equalToConstant: 2),
+            breakline3View.topAnchor.constraint(equalTo: textFieldAge.bottomAnchor, constant: 2),
+            breakline3View.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            breakline3View.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -240),
+            breakline3View.heightAnchor.constraint(equalToConstant: 2),
             
-            saveSettingsButton.topAnchor.constraint(equalTo: breakline3.bottomAnchor, constant: 30),
+            saveSettingsButton.topAnchor.constraint(equalTo: breakline3View.bottomAnchor, constant: 30),
             saveSettingsButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             saveSettingsButton.heightAnchor.constraint(equalToConstant: 50),
             saveSettingsButton.widthAnchor.constraint(equalToConstant: 300),

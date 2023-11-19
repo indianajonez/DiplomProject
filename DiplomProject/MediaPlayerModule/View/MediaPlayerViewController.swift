@@ -14,15 +14,15 @@ class MediaPlayerViewController: UIViewController {
     private let albums = Album.get()
     
     private lazy var tableView: UITableView = {
-        let v = UITableView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.dataSource = self
-        v.delegate = self
-        v.register(AlbumTableViewCell.self, forCellReuseIdentifier: "cell")
-        v.estimatedRowHeight = 132
-        v.rowHeight = UITableView.automaticDimension
-        v.tableFooterView = UIView()
-        return v
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.estimatedRowHeight = 132
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
+        return tableView
     }()
     
     //MARK: - Life cycls

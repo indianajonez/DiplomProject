@@ -16,7 +16,7 @@ class FavorietsViewController: UIViewController {
     
     private var coreDataManager = CoreDataManager.shared
     
-    private lazy var tablePosts: UITableView = {
+    private lazy var postTableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.delegate = self
@@ -50,22 +50,22 @@ class FavorietsViewController: UIViewController {
         favoriteData = CoreDataManager.shared.fetchData(fetchRequest)
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
-            self.tablePosts.reloadData()
+            self.postTableView.reloadData()
         }
     }
     
     private func setupView() {
-        view.addSubview(tablePosts)
+        view.addSubview(postTableView)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
         
             // таблица
-            tablePosts.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tablePosts.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tablePosts.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tablePosts.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            postTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            postTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            postTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            postTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         
         ])
     }
@@ -101,7 +101,7 @@ extension FavorietsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tablePosts.dequeueReusableCell(withIdentifier: String(describing: FavorietsPostTableViewCell.self), for: indexPath) as? FavorietsPostTableViewCell else {return UITableViewCell()}
+        guard let cell = postTableView.dequeueReusableCell(withIdentifier: String(describing: FavorietsPostTableViewCell.self), for: indexPath) as? FavorietsPostTableViewCell else {return UITableViewCell()}
         cell.setup(post: favoriteData[indexPath.row])
         return cell
     }

@@ -8,11 +8,13 @@
 import UIKit
 import FirebaseAuth
 
+//TODO: Почему в Login checkerService закрыт протоколом и инджектится через конструктор, а в RegistrationViewController у вас композиция, и checkerService порождается непосредственно контроллером?) Наверное, надо как-то унифицировать. Первый вариант, как в LoginViewController правильнее.
+
 class LoginViewController: UIViewController {
     
     //MARK: - Private properties
     
-    private var checkerService: ChekerServiceProtocol?
+    private var checkerService: CheckerServiceProtocol?
         
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
@@ -92,7 +94,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - Live Cycls
     
-        init(checkerService: ChekerServiceProtocol) {
+        init(checkerService: CheckerServiceProtocol) {
             super.init(nibName: nil, bundle: nil)
             self.checkerService = checkerService
             

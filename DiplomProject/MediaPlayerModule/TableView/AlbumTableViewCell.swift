@@ -14,7 +14,7 @@ final class AlbumTableViewCell: UITableViewCell {
     var album: Album? {
         didSet {
             if let album = album {
-                albumCover.image = UIImage(named: album.image)
+                albumCoverView.image = UIImage(named: album.image)
                 albumName.text = album.name
                 songsCount.text = "\(album.songs.count) Songs"
             }
@@ -23,7 +23,7 @@ final class AlbumTableViewCell: UITableViewCell {
     
     //MARK: - Private properties
     
-    private lazy var albumCover: UIImageView = {
+    private lazy var albumCoverView: UIImageView = {
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.contentMode = .scaleAspectFill
@@ -67,7 +67,7 @@ final class AlbumTableViewCell: UITableViewCell {
     //MARK: - Public methods
     
     func setupView() {
-        [albumCover, albumName, songsCount].forEach { (v) in
+        [albumCoverView, albumName, songsCount].forEach { (v) in
             contentView.addSubview(v)
         }
         setupConstraints()
@@ -79,23 +79,23 @@ final class AlbumTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
         
-            albumCover.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            albumCover.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            albumCover.widthAnchor.constraint(equalToConstant: 100),
-            albumCover.heightAnchor.constraint(equalToConstant: 100),
-            albumCover.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -16)
+            albumCoverView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            albumCoverView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            albumCoverView.widthAnchor.constraint(equalToConstant: 100),
+            albumCoverView.heightAnchor.constraint(equalToConstant: 100),
+            albumCoverView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([
         
-            albumName.leadingAnchor.constraint(equalTo: albumCover.trailingAnchor, constant: 16),
+            albumName.leadingAnchor.constraint(equalTo: albumCoverView.trailingAnchor, constant: 16),
             albumName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             albumName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([
         
-            songsCount.leadingAnchor.constraint(equalTo: albumCover.trailingAnchor, constant: 16),
+            songsCount.leadingAnchor.constraint(equalTo: albumCoverView.trailingAnchor, constant: 16),
             songsCount.topAnchor.constraint(equalTo: albumName.bottomAnchor, constant: 8),
             songsCount.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             songsCount.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)

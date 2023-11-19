@@ -17,99 +17,99 @@ final class MediaPlayer: UIView {
     //MARK: - Private properties
     
     private lazy var albumName: UILabel = {
-       let v = UILabel()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.textAlignment = .center
-        v.font = .systemFont(ofSize: 32, weight: .bold)
+       let albumName = UILabel()
+        albumName.translatesAutoresizingMaskIntoConstraints = false
+        albumName.textAlignment = .center
+        albumName.font = .systemFont(ofSize: 32, weight: .bold)
         
-        return v
+        return albumName
     }()
     
-    private lazy var albumCover: UIImageView = {
-       let v = UIImageView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.contentMode = .scaleToFill
-        v.clipsToBounds = true
-        v.layer.cornerRadius = 100
-        v.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
-        return v
+    private lazy var albumCoverView: UIImageView = {
+       let albumCover = UIImageView()
+        albumCover.translatesAutoresizingMaskIntoConstraints = false
+        albumCover.contentMode = .scaleToFill
+        albumCover.clipsToBounds = true
+        albumCover.layer.cornerRadius = 100
+        albumCover.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
+        return albumCover
     }()
     
     private lazy var progressBar: UISlider = {
-       let v = UISlider()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.addTarget(self, action: #selector(progressScrubbed(_:)), for: .valueChanged)
-        v.minimumTrackTintColor = UIColor(named: "subtitleColor")
-        return v
+       let progressBar = UISlider()
+        progressBar.translatesAutoresizingMaskIntoConstraints = false
+        progressBar.addTarget(self, action: #selector(progressScrubbed(_:)), for: .valueChanged)
+        progressBar.minimumTrackTintColor = UIColor(named: "subtitleColor")
+        return progressBar
     }()
     
     private lazy var elapsedTimeLabel: UILabel = {
-        let v = UILabel()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.font = .systemFont(ofSize: 14, weight: .light)
-        v.text = "00:00"
-        return v
+        let elapsedTimeLabel = UILabel()
+        elapsedTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+        elapsedTimeLabel.font = .systemFont(ofSize: 14, weight: .light)
+        elapsedTimeLabel.text = "00:00"
+        return elapsedTimeLabel
     }()
     
     private lazy var remainingTimeLabel: UILabel = {
-        let v = UILabel()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.font = .systemFont(ofSize: 14, weight: .light)
-        v.text = "00:00"
-        return v
+        let remainingTimeLabel = UILabel()
+        remainingTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+        remainingTimeLabel.font = .systemFont(ofSize: 14, weight: .light)
+        remainingTimeLabel.text = "00:00"
+        return remainingTimeLabel
     }()
     
     private lazy var songNameLabel: UILabel = {
-        let v = UILabel()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.font = .systemFont(ofSize: 16, weight: .bold)
-        return v
+        let songNameLabel = UILabel()
+        songNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        songNameLabel.font = .systemFont(ofSize: 16, weight: .bold)
+        return songNameLabel
     }()
     
     private lazy var artistLabel: UILabel = {
-        let v = UILabel()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.font = .systemFont(ofSize: 16, weight: .light)
-        return v
+        let artistLabel = UILabel()
+        artistLabel.translatesAutoresizingMaskIntoConstraints = false
+        artistLabel.font = .systemFont(ofSize: 16, weight: .light)
+        return artistLabel
     }()
     
     private lazy var previosButton: UIButton = {
-       let v = UIButton()
-        v.translatesAutoresizingMaskIntoConstraints = false
+       let previosButton = UIButton()
+        previosButton.translatesAutoresizingMaskIntoConstraints = false
         let config = UIImage.SymbolConfiguration(pointSize: 30)
-        v.setImage(UIImage(systemName: "backward.end.fill", withConfiguration: config), for: .normal)
-        v.addTarget(self, action: #selector(didTapPrevios(_ :)), for: .touchUpInside)
-        v.tintColor = .white
-        return v
+        previosButton.setImage(UIImage(systemName: "backward.end.fill", withConfiguration: config), for: .normal)
+        previosButton.addTarget(self, action: #selector(didTapPrevios(_ :)), for: .touchUpInside)
+        previosButton.tintColor = .white
+        return previosButton
     }()
     
     private lazy var playPlauseButton: UIButton = {
-       let v = UIButton()
-        v.translatesAutoresizingMaskIntoConstraints = false
+       let playPlauseButton = UIButton()
+        playPlauseButton.translatesAutoresizingMaskIntoConstraints = false
         let config = UIImage.SymbolConfiguration(pointSize: 100)
-        v.setImage(UIImage(systemName: "play.circle.fill", withConfiguration: config), for: .normal)
-        v.addTarget(self, action: #selector(didTapPlayPause(_ :)), for: .touchUpInside)
-        v.tintColor = .white
-        return v
+        playPlauseButton.setImage(UIImage(systemName: "play.circle.fill", withConfiguration: config), for: .normal)
+        playPlauseButton.addTarget(self, action: #selector(didTapPlayPause(_ :)), for: .touchUpInside)
+        playPlauseButton.tintColor = .white
+        return playPlauseButton
     }()
     
     private lazy var nextButton: UIButton = {
-       let v = UIButton()
-        v.translatesAutoresizingMaskIntoConstraints = false
+       let nextButton = UIButton()
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
         let config = UIImage.SymbolConfiguration(pointSize: 30)
-        v.setImage(UIImage(systemName: "forward.end.fill", withConfiguration: config), for: .normal)
-        v.addTarget(self, action: #selector(didTapNext(_ :)), for: .touchUpInside)
-        v.tintColor = .white
-        return v
+        nextButton.setImage(UIImage(systemName: "forward.end.fill", withConfiguration: config), for: .normal)
+        nextButton.addTarget(self, action: #selector(didTapNext(_ :)), for: .touchUpInside)
+        nextButton.tintColor = .white
+        return nextButton
     }()
     
-    private lazy var controlStack: UIStackView = {
-        let v = UIStackView(arrangedSubviews: [previosButton, playPlauseButton, nextButton])
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.axis = .horizontal
-        v.distribution = .equalSpacing
-        v.spacing = 20
-        return v
+    private lazy var controlStackView: UIStackView = {
+        let controlStack = UIStackView(arrangedSubviews: [previosButton, playPlauseButton, nextButton])
+        controlStack.translatesAutoresizingMaskIntoConstraints = false
+        controlStack.axis = .horizontal
+        controlStack.distribution = .equalSpacing
+        controlStack.spacing = 20
+        return controlStack
     }()
     
     private var player = AVAudioPlayer()
@@ -195,14 +195,14 @@ final class MediaPlayer: UIView {
     
     private func setupView() {
         albumName.text = album.name
-        albumCover.image = UIImage(named: album.image)
+        albumCoverView.image = UIImage(named: album.image)
         setupPlayer(song: album.songs[playingIndex])
         
         [albumName, songNameLabel, artistLabel, elapsedTimeLabel, remainingTimeLabel].forEach { (v) in
             v.textColor = .white
         }
         
-        [albumName, albumCover, songNameLabel, artistLabel, progressBar, elapsedTimeLabel, remainingTimeLabel, controlStack].forEach { (v) in
+        [albumName, albumCoverView, songNameLabel, artistLabel, progressBar, elapsedTimeLabel, remainingTimeLabel, controlStackView].forEach { (v) in
             addSubview(v)
         }
         
@@ -223,10 +223,10 @@ final class MediaPlayer: UIView {
         // album cover
         
         NSLayoutConstraint.activate([
-            albumCover.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            albumCover.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16),
-            albumCover.topAnchor.constraint(equalTo: albumName.bottomAnchor, constant: 32),
-            albumCover.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.5)
+            albumCoverView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            albumCoverView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16),
+            albumCoverView.topAnchor.constraint(equalTo: albumName.bottomAnchor, constant: 32),
+            albumCoverView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.5)
         ])
         
         // song mane
@@ -234,7 +234,7 @@ final class MediaPlayer: UIView {
         NSLayoutConstraint.activate([
         songNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
         songNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-        songNameLabel.topAnchor.constraint(equalTo: albumCover.bottomAnchor, constant: 16)
+        songNameLabel.topAnchor.constraint(equalTo: albumCoverView.bottomAnchor, constant: 16)
         ])
         
         // artistLabel
@@ -275,9 +275,9 @@ final class MediaPlayer: UIView {
         
         NSLayoutConstraint.activate([
         
-            controlStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            controlStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
-            controlStack.topAnchor.constraint(equalTo: remainingTimeLabel.bottomAnchor, constant: 8)
+            controlStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            controlStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            controlStackView.topAnchor.constraint(equalTo: remainingTimeLabel.bottomAnchor, constant: 8)
 
         ])
     }

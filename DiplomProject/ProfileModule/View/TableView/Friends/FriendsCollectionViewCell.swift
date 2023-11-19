@@ -11,7 +11,7 @@ class FrinedsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Private properties
     
-    private lazy var imageCollectionCell: UIImageView = {
+    private lazy var imageCollectionViewCell: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.clipsToBounds = true
@@ -35,7 +35,7 @@ class FrinedsCollectionViewCell: UICollectionViewCell {
     // MARK: - Public methods
     
     func setupCollectionFrinedsCell(_ photo: UIImage) {
-        imageCollectionCell.image = photo
+        imageCollectionViewCell.image = photo
     }
     
     
@@ -43,13 +43,13 @@ class FrinedsCollectionViewCell: UICollectionViewCell {
     
     private func setupConstrains() {
         
-        contentView.addSubview(imageCollectionCell)
+        contentView.addSubview(imageCollectionViewCell)
         
         NSLayoutConstraint.activate([
-            imageCollectionCell.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageCollectionCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageCollectionCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imageCollectionCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            imageCollectionViewCell.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageCollectionViewCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageCollectionViewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageCollectionViewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     

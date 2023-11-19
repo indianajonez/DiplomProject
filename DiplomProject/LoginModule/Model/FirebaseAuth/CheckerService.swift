@@ -8,14 +8,14 @@
 import FirebaseAuth
 
 // Абстракция, по которой проходит авторизация/регистрация юзера в систему
-protocol ChekerServiceProtocol {
+protocol CheckerServiceProtocol {
     func logIn(email: String, pass: String, completion: @escaping(User?, _ errorString: String?) -> Void )
     func singUp(email: String, pass: String, completion: @escaping (Bool, _ errorString: String?) -> Void )
-    func checkUserStartSession() -> Bool
+    func hasUserSession() -> Bool
     func logout()
 }
 
-final class CheckerService: ChekerServiceProtocol {
+final class CheckerService: CheckerServiceProtocol {
     
     //MARK: - Public methods
     
@@ -61,9 +61,9 @@ final class CheckerService: ChekerServiceProtocol {
         }
     }
     
-    func checkUserStartSession() -> Bool {
+    func hasUserSession() -> Bool {
         guard let _ = Auth.auth().currentUser else {
-            return false
+            return Auth.auth().currentUser != nil //return //false 
         }
         return true
     }

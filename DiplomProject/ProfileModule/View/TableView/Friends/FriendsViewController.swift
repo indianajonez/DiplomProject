@@ -15,7 +15,7 @@ class FriendsViewController: UIViewController {
         
     //    lazy var allPhotos = Photo.makeCollectioinPhotos()
         
-        private lazy var imageCollection: UICollectionView = {
+        private lazy var imageCollectionView: UICollectionView = {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical
             
@@ -40,13 +40,13 @@ class FriendsViewController: UIViewController {
     // MARK: - Private methods
     
         private func layout() {
-            view.addSubview(imageCollection)
+            view.addSubview(imageCollectionView)
             
             NSLayoutConstraint.activate([
-                imageCollection.topAnchor.constraint(equalTo: view.topAnchor),
-                imageCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                imageCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                imageCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                imageCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+                imageCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                imageCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                imageCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
         }
 
@@ -62,7 +62,7 @@ class FriendsViewController: UIViewController {
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            guard let cell = imageCollection.dequeueReusableCell(withReuseIdentifier: FrinedsCollectionViewCell.identifier, for: indexPath) as? FrinedsCollectionViewCell else { return UICollectionViewCell()}
+            guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: FrinedsCollectionViewCell.identifier, for: indexPath) as? FrinedsCollectionViewCell else { return UICollectionViewCell()}
             cell.setupCollectionFrinedsCell(imageList[indexPath.item])
             return cell
         }
@@ -74,7 +74,7 @@ class FriendsViewController: UIViewController {
         private var sideInset: CGFloat {return 8}
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = (imageCollection.bounds.width - sideInset * 4) / 3
+            let width = (imageCollectionView.bounds.width - sideInset * 4) / 3
             return CGSize(width: width, height: width)
         }
         

@@ -16,9 +16,9 @@ final class MusicPlayerViewController: UIViewController {
     //MARK: - Private properties
     
     private lazy var mediaPlayer: MediaPlayer = {
-        let v = MediaPlayer(album: album)
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
+        let mediaPlayer = MediaPlayer(album: album)
+        mediaPlayer.translatesAutoresizingMaskIntoConstraints = false
+        return mediaPlayer
     }()
     
     //MARK: - Init

@@ -13,7 +13,7 @@ class PhotosViewController: UIViewController {
     
     private var imageList: [UIImage] = Photo.makeCollectioinPhotos()
     
-    private lazy var imageCollection: UICollectionView = {
+    private lazy var imageCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         
@@ -38,13 +38,13 @@ class PhotosViewController: UIViewController {
     //MARK: - Private methods
     
     private func layout() {
-        view.addSubview(imageCollection)
+        view.addSubview(imageCollectionView)
         
         NSLayoutConstraint.activate([
-            imageCollection.topAnchor.constraint(equalTo: view.topAnchor),
-            imageCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            imageCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 
@@ -59,7 +59,7 @@ extension PhotosViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = imageCollection.dequeueReusableCell(withReuseIdentifier: PhotosCollectionViewCell.identifier, for: indexPath) as? PhotosCollectionViewCell else { return UICollectionViewCell()}
+        guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: PhotosCollectionViewCell.identifier, for: indexPath) as? PhotosCollectionViewCell else { return UICollectionViewCell()}
         cell.setupCollectionCell(imageList[indexPath.item])
         return cell
     }
@@ -70,7 +70,7 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout {
     private var sideInset: CGFloat {return 8}
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (imageCollection.bounds.width - sideInset * 4) / 3
+        let width = (imageCollectionView.bounds.width - sideInset * 4) / 3
         return CGSize(width: width, height: width)
     }
     

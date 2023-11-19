@@ -43,8 +43,8 @@
 		F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8E82AE013890055BD2D /* CheckerService.swift */; };
 		F3A1A8ED2AE0144D0055BD2D /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */; };
 		F3A1A8EF2AE0146C0055BD2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8EE2AE0146C0055BD2D /* User.swift */; };
-		F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F02AE0149A0055BD2D /* CurrentUserService.swift */; };
-		F3A1A8F32AE015240055BD2D /* RegistrationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */; };
+		F3A1A8F12AE0149A0055BD2D /* CurrentUserService_DELETE.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F02AE0149A0055BD2D /* CurrentUserService_DELETE.swift */; };
+		F3A1A8F32AE015240055BD2D /* RegistrationAlert_DELETE.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F22AE015240055BD2D /* RegistrationAlert_DELETE.swift */; };
 		F3A1A8F72AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F62AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift */; };
 		F3A1A8F92AE015B60055BD2D /* LoginViewControllerDelegateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8F82AE015B60055BD2D /* LoginViewControllerDelegateError.swift */; };
 		F3A1A8FF2AE0166C0055BD2D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A8FE2AE0166C0055BD2D /* ProfileViewController.swift */; };
@@ -98,8 +98,8 @@
 		F3A1A8E82AE013890055BD2D /* CheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerService.swift; sourceTree = "<group>"; };
 		F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		F3A1A8EE2AE0146C0055BD2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F3A1A8F02AE0149A0055BD2D /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
-		F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAlert.swift; sourceTree = "<group>"; };
+		F3A1A8F02AE0149A0055BD2D /* CurrentUserService_DELETE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService_DELETE.swift; sourceTree = "<group>"; };
+		F3A1A8F22AE015240055BD2D /* RegistrationAlert_DELETE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAlert_DELETE.swift; sourceTree = "<group>"; };
 		F3A1A8F62AE0157B0055BD2D /* LoginViewControllerDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegateProtocol.swift; sourceTree = "<group>"; };
 		F3A1A8F82AE015B60055BD2D /* LoginViewControllerDelegateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegateError.swift; sourceTree = "<group>"; };
 		F3A1A8FE2AE0166C0055BD2D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -310,9 +310,9 @@
 			children = (
 				F3A1A8EE2AE0146C0055BD2D /* User.swift */,
 				F3A1A8EC2AE0144D0055BD2D /* UserServiceProtocol.swift */,
-				F3A1A8F22AE015240055BD2D /* RegistrationAlert.swift */,
+				F3A1A8F22AE015240055BD2D /* RegistrationAlert_DELETE.swift */,
 				F3A1A8E72AE0133F0055BD2D /* FirebaseAuth */,
-				F3A1A8F02AE0149A0055BD2D /* CurrentUserService.swift */,
+				F3A1A8F02AE0149A0055BD2D /* CurrentUserService_DELETE.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,7 +478,7 @@
 				F3E9B7952AE26FAE00FAA97A /* PostTableViewCell.swift in Sources */,
 				F39A96852AEE7B73000F5F40 /* Friends.swift in Sources */,
 				F34B27382AE9580D0088F5C8 /* Song.swift in Sources */,
-				F3A1A8F12AE0149A0055BD2D /* CurrentUserService.swift in Sources */,
+				F3A1A8F12AE0149A0055BD2D /* CurrentUserService_DELETE.swift in Sources */,
 				F39A968C2AEECB12000F5F40 /* FavorietsPostTableViewCell_TEST.swift in Sources */,
 				F3E9B7992AE27D6000FAA97A /* Photos.swift in Sources */,
 				F34B271B2AE8704E0088F5C8 /* TabBarController.swift in Sources */,
@@ -490,7 +490,7 @@
 				F39A96892AEE7FEB000F5F40 /* FriendsCollectionViewCell.swift in Sources */,
 				F34B273C2AE964250088F5C8 /* AlbumTableViewCell.swift in Sources */,
 				F3A1A8E92AE013890055BD2D /* CheckerService.swift in Sources */,
-				F3A1A8F32AE015240055BD2D /* RegistrationAlert.swift in Sources */,
+				F3A1A8F32AE015240055BD2D /* RegistrationAlert_DELETE.swift in Sources */,
 				F3E9B7932AE26F4400FAA97A /* PhotosGalleryDelegateProtocol.swift in Sources */,
 				F34B271D2AE879AB0088F5C8 /* FriendsTableViewCell.swift in Sources */,
 				F3E9B7A22AE6B50600FAA97A /* SettingsProfileViewController.swift in Sources */,

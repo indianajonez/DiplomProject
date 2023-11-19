@@ -11,7 +11,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Private properties
     
-    private lazy var imageCollectionCell: UIImageView = {
+    private lazy var imageCollectionCellView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.clipsToBounds = true
@@ -35,7 +35,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     // MARK: - Public methods
     
     func setupCollectionCell(_ photo: UIImage) {
-        imageCollectionCell.image = photo
+        imageCollectionCellView.image = photo
     }
     
     
@@ -43,13 +43,13 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     
     private func setupConstrains() {
         
-        contentView.addSubview(imageCollectionCell)
+        contentView.addSubview(imageCollectionCellView)
         
         NSLayoutConstraint.activate([
-            imageCollectionCell.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageCollectionCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageCollectionCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imageCollectionCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            imageCollectionCellView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageCollectionCellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageCollectionCellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageCollectionCellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     

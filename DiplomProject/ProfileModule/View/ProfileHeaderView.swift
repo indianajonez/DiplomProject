@@ -11,7 +11,7 @@ class ProfileHeaderView: UIView {
     
     //MARK: - Private properties
     
-    private lazy var avatarImage: UIImageView = {
+    private lazy var avatarImageView: UIImageView = {
         var image = UIImageView(image: UIImage(named: "Kate"))
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = 50
@@ -49,7 +49,7 @@ class ProfileHeaderView: UIView {
         return label
     }()
     
-    private lazy var iconAge: UIImageView = {
+    private lazy var iconAgeView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "1cake.png")
@@ -67,7 +67,7 @@ class ProfileHeaderView: UIView {
         return label
     }()
     
-    private lazy var iconAboutUser: UIImageView = {
+    private lazy var iconAboutUserView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "card.png")
@@ -76,7 +76,7 @@ class ProfileHeaderView: UIView {
         return view
     }()
     
-    private lazy var iconEmail: UIImageView = {
+    private lazy var iconEmailView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "email.png")
@@ -90,7 +90,7 @@ class ProfileHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        [ fullNameLabel, labelUserName, labelAboutUser, labelAge, avatarImage, iconAge, iconAboutUser, iconEmail].forEach{addSubview($0)}
+        [ fullNameLabel, labelUserName, labelAboutUser, labelAge, avatarImageView, iconAgeView, iconAboutUserView, iconEmailView].forEach{addSubview($0)}
         setupConstraints()
     }
     
@@ -104,7 +104,7 @@ class ProfileHeaderView: UIView {
     func setupView(user: User?) {
         if let user = user {
             self.fullNameLabel.text = user.fullName
-            self.avatarImage.image = user.avatar
+            self.avatarImageView.image = user.avatar
             self.labelUserName.text = user.name 
             self.labelAboutUser.text = user.aboutUser
             self.labelAge.text = user.age
@@ -113,7 +113,7 @@ class ProfileHeaderView: UIView {
     
     func updateInfo(user: User?) {
         guard let user = user else {return}
-        self.avatarImage.image = user.avatar
+        self.avatarImageView.image = user.avatar
         self.labelAboutUser.text = user.aboutUser
         self.labelAge.text = user.age
         self.labelUserName.text = user.name
@@ -124,31 +124,31 @@ class ProfileHeaderView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
         
-            avatarImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
-            avatarImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            avatarImage.widthAnchor.constraint(equalToConstant: 100),
-            avatarImage.heightAnchor.constraint(equalToConstant: 100),
+            avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
+            avatarImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            avatarImageView.widthAnchor.constraint(equalToConstant: 100),
+            avatarImageView.heightAnchor.constraint(equalToConstant: 100),
             
             labelUserName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            labelUserName.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 10),
+            labelUserName.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 10),
             
-            iconAboutUser.topAnchor.constraint(equalTo: labelUserName.bottomAnchor, constant: 15),
-            iconAboutUser.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 10),
+            iconAboutUserView.topAnchor.constraint(equalTo: labelUserName.bottomAnchor, constant: 15),
+            iconAboutUserView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 10),
             
             labelAboutUser.topAnchor.constraint(equalTo: labelUserName.bottomAnchor, constant: 15),
-            labelAboutUser.leadingAnchor.constraint(equalTo: iconAboutUser.trailingAnchor, constant: 4),
+            labelAboutUser.leadingAnchor.constraint(equalTo: iconAboutUserView.trailingAnchor, constant: 4),
             
-            iconAge.topAnchor.constraint(equalTo: labelAboutUser.bottomAnchor, constant: 15),
-            iconAge.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 10),
+            iconAgeView.topAnchor.constraint(equalTo: labelAboutUser.bottomAnchor, constant: 15),
+            iconAgeView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 10),
             
             labelAge.topAnchor.constraint(equalTo: labelAboutUser.bottomAnchor, constant: 15),
-            labelAge.leadingAnchor.constraint(equalTo: iconAge.trailingAnchor, constant: 4),
+            labelAge.leadingAnchor.constraint(equalTo: iconAgeView.trailingAnchor, constant: 4),
             
-            iconEmail.topAnchor.constraint(equalTo: labelAge.bottomAnchor, constant: 15),
-            iconEmail.leadingAnchor.constraint(equalTo: avatarImage.trailingAnchor, constant: 12),
+            iconEmailView.topAnchor.constraint(equalTo: labelAge.bottomAnchor, constant: 15),
+            iconEmailView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 12),
             
             fullNameLabel.topAnchor.constraint(equalTo: labelAge.bottomAnchor, constant: 15),
-            fullNameLabel.leadingAnchor.constraint(equalTo: iconEmail.trailingAnchor, constant: 8),
+            fullNameLabel.leadingAnchor.constraint(equalTo: iconEmailView.trailingAnchor, constant: 8),
 
         ])
 

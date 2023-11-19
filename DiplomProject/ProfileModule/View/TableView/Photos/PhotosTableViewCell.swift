@@ -83,24 +83,24 @@ class PhotosTableViewCell: UITableViewCell {
         
         let labelinset: CGFloat = 12
         
-        [namelabel, button, imageCollection].forEach{contentView.addSubview($0)}
+        [namelabel, button, imageCollectionView].forEach{contentView.addSubview($0)}
         
         NSLayoutConstraint.activate([
             
             namelabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: labelinset),
             namelabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: labelinset),
-            namelabel.bottomAnchor.constraint(equalTo: imageCollection.topAnchor, constant: -labelinset),
+            namelabel.bottomAnchor.constraint(equalTo: imageCollectionView.topAnchor, constant: -labelinset),
             
             button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -labelinset),
             button.centerYAnchor.constraint(equalTo: namelabel.centerYAnchor),
             button.heightAnchor.constraint(equalToConstant: 20),
             button.widthAnchor.constraint(equalToConstant: 20),
             
-            imageCollection.topAnchor.constraint(equalTo: namelabel.bottomAnchor, constant: labelinset),
-            imageCollection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: labelinset),
-            imageCollection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -labelinset),
-            imageCollection.heightAnchor.constraint(equalToConstant: 100),
-            imageCollection.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -labelinset)
+            imageCollectionView.topAnchor.constraint(equalTo: namelabel.bottomAnchor, constant: labelinset),
+            imageCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: labelinset),
+            imageCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -labelinset),
+            imageCollectionView.heightAnchor.constraint(equalToConstant: 100),
+            imageCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -labelinset)
             
         ])
     }
